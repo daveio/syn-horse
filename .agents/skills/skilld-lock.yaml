@@ -22,11 +22,11 @@ skills:
     generator: skilld
   nuxt-content-skilld:
     packageName: "@nuxt/content"
-    version: 3.15.1
-    packages: "@nuxt/content@3.15.1"
+    version: 3.15.2
+    packages: "@nuxt/content@3.15.2"
     repo: nuxt/content
-    source: "https://github.com/nuxt/content/tree/v3.15.1/docs"
-    syncedAt: 2026-07-22
+    source: "https://github.com/nuxt/content/tree/v3.15.2/docs"
+    syncedAt: 2026-07-24
     generator: skilld
   nuxt-image-skilld:
     packageName: "@nuxt/image"
@@ -52,11 +52,11 @@ skills:
     generator: skilld
   nuxtjs-seo-skilld:
     packageName: "@nuxtjs/seo"
-    version: 5.3.4
-    packages: "@nuxtjs/seo@5.3.4"
+    version: 5.3.6
+    packages: "@nuxtjs/seo@5.3.6"
     repo: harlan-zw/nuxt-seo
-    source: "https://nuxtseo.com/llms.txt"
-    syncedAt: 2026-07-22
+    source: "https://github.com/harlan-zw/nuxt-seo/tree/v5.3.6/docs"
+    syncedAt: 2026-07-24
     generator: skilld
   libsql-client-skilld:
     packageName: "@libsql/client"
@@ -81,17 +81,19 @@ skills:
     generator: skilld
   takumi-rs-core-skilld:
     packageName: "@takumi-rs/core"
-    version: 1.8.7
+    version: 2.4.2
+    packages: "@takumi-rs/core@2.4.2"
     repo: kane50613/takumi
-    source: "https://github.com/kane50613/takumi/tree/@takumi-rs/core@1.8.7/docs"
-    syncedAt: 2026-07-20
+    source: "https://github.com/kane50613/takumi/tree/master/docs"
+    syncedAt: 2026-07-24
     generator: skilld
   takumi-rs-wasm-skilld:
     packageName: "@takumi-rs/wasm"
-    version: 1.8.7
+    version: 2.4.2
+    packages: "@takumi-rs/wasm@2.4.2"
     repo: kane50613/takumi
-    source: "https://github.com/kane50613/takumi/tree/@takumi-rs/wasm@1.8.7/docs"
-    syncedAt: 2026-07-20
+    source: "https://github.com/kane50613/takumi/tree/master/docs"
+    syncedAt: 2026-07-24
     generator: skilld
   better-sqlite3-skilld:
     packageName: better-sqlite3
@@ -196,11 +198,11 @@ skills:
     generator: skilld
   anthropic-ai-claude-code-skilld:
     packageName: "@anthropic-ai/claude-code"
-    version: 2.1.217
-    packages: "@anthropic-ai/claude-code@2.1.217"
+    version: 2.1.218
+    packages: "@anthropic-ai/claude-code@2.1.218"
     repo: Exhen/claude-code-2.1.88
     source: "ungh://Exhen/claude-code-2.1.88"
-    syncedAt: 2026-07-22
+    syncedAt: 2026-07-24
     generator: skilld
   catppuccin-tailwindcss-skilld:
     packageName: "@catppuccin/tailwindcss"
@@ -304,9 +306,9 @@ skills:
     generator: skilld
   wrangler-skilld:
     packageName: wrangler
-    version: 4.113.0
-    packages: "wrangler@4.113.0"
+    version: 4.114.0
+    packages: "wrangler@4.114.0"
     repo: cloudflare/workers-sdk
     source: "https://developers.cloudflare.com/workers/**"
-    syncedAt: 2026-07-22
+    syncedAt: 2026-07-24
     generator: skilld
