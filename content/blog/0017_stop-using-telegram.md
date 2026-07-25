@@ -8,4 +8,4 @@ read: "6 min"
 future: true
 ---
 
-(coming soon — this one's still cooking.)
+(coming soon. this one's still cooking.)
