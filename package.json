@@ -23,7 +23,7 @@
     "drizzle-kit": "^0.31.10",
     "drizzle-orm": "^0.45.2",
     "eslint": "^10.8.0",
-    "nuxt": "^4.5.0",
+    "nuxt": "^4.5.1",
     "nuxt-gtag": "^4.1.0",
     "nuxt-security": "^2.6.0",
     "tailwindcss": "^4.3.3",
