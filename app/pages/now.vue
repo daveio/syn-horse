@@ -91,41 +91,10 @@ useSeoMeta({
     </ul>
 
     <h2 class="page-h2">listening</h2>
-    <iframe
-      width="600"
-      height="337"
-      src="https://www.youtube.com/embed/ZAi_nFiVekQ"
-      title="bodyimage - BOY DRUGS (Official Music Video)"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
-    <br />
-    <iframe
-      width="600"
-      height="337"
-      src="https://www.youtube.com/embed/4CmYE-fbVWc"
-      title="The Skinner Brothers - Nothing on Me (Official Music Video)"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
-    <br />
-    <iframe
-      width="600"
-      height="337"
-      src="https://www.youtube.com/embed/OPiDMM6YwFA"
-      title="Chase &amp; Status - No Problem"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
-
     <ul class="diamond-list">
-      <li><span>wait, did I just reimplement myspace?</span></li>
+      <li><span>bodyimage - BOY DRUGS</span></li>
+      <li><span>The Skinner Brothers - Nothing on Me</span></li>
+      <li><span>Chase & Status - No Problem</span></li>
     </ul>
 
     <h2 class="page-h2">not doing</h2>
