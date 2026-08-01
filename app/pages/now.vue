@@ -11,7 +11,7 @@ useSeoMeta({
   <div class="page-shell">
     <div class="eyebrow">▶ /now · updated 2026.04.20</div>
     <h1 class="page-h1">now<span class="dot">.</span></h1>
-    <p class="lede max-w-[600px]">
+    <p class="lede max-w-150">
       a /now page. what i'm actually doing this month, not what linkedin would have you believe.
     </p>
 
@@ -20,20 +20,49 @@ useSeoMeta({
       <li>
         <span>
           <b>syn.horse</b>
-          — this rewrite. nuxt 4 on cloudflare workers, content from markdown, deployed via wrangler. mostly working.
-          {{ SITE.status }}.
+          - this very site. nuxt 4 on cloudflare workers, blog content from markdown. mostly working.
+        </span>
+      </li>
+      <li>
+        <span>
+          <b><span class="sparkle-motion">the cluster</span></b>
+          - a small kubernetes cluster for hosting personal projects like
+          <NuxtLink to="https://basilisk.gallery">basilisk.gallery</NuxtLink> and shared house infrastructure like
+          <NuxtLink to="https://github.com/hxck/arrsuite">the arrs</NuxtLink>. using
+          <NuxtLink to="https://upcloud.com">UpCloud</NuxtLink> because they're wonderful and based outside the US (in
+          Finland). IaC using Pulumi, mostly in typescript. still a work in progress. may also have an in-house node,
+          that might be cool, push workloads out to the internet by shifting their node selector.
         </span>
       </li>
       <li>
         <span>
           <b>genderbase</b>
-          — quarterly content review. removed 2 dead links, added 7 resources, refreshed the FAQ.
+          - a resource for people to learn about gender identity and expression. still in early stages. ruby on rails,
+          will eventually be hosted on the cluster because cloudflare's container functionality is... limited.
         </span>
       </li>
       <li>
         <span>
-          <b>meshtastic node FOXP1</b>
-          — moved it to a higher ridge. range went from 8km to ~12km. neighbours now relay my jokes.
+          <b>recon</b>
+          - exploring swift and swiftui. pretty simple; it <b>RE</b>sizes and <b>CON</b>verts images. built it due to
+          issues with mastodon, which it did not fix. may publish to the app store.
+        </span>
+      </li>
+      <li>
+        <span>
+          <b>super sekrit TEC project</b>
+          - volunteering for the <NuxtLink to="https://transequitycoalition.org">Trans Equity Coalition</NuxtLink> of
+          New Jersey. web dev, nuxt 4 on cloudflare workers. can't really say much more than that, but it's a good cause
+          and i'm happy to help.
+        </span>
+      </li>
+      <li>
+        <span>
+          <b>a house</b>
+          - i'm moving house. it has taken over a year and I have been stuck at my parents for the duration. this is, of
+          course, driving me strange - but we're close to the finish line. after which, i'll be buying a house in wales
+          for me, mog, faith, and too many cats. after I pay back the not remotely insignificant, and totally bizarre to
+          me that this is seen as okay, <em>cost</em> of selling the house. don't get me started.
         </span>
       </li>
     </ul>
@@ -41,63 +70,88 @@ useSeoMeta({
     <h2 class="page-h2">reading</h2>
     <ul class="diamond-list">
       <li>
-        <span><b>the dispossessed</b>, le guin, third time round. somehow weirder.</span>
+        <span
+          ><b>the illuminatus! trilogy</b>, robert anton wilson. for the second time. it literally restructures your
+          interface with reality while you read. the story is nonsense. it's a delivery mechanism for a wider
+          mind.</span
+        >
       </li>
       <li>
         <span>
-          <b>the unaccountability machine</b>, dan davies. systems thinking for people who already shout at git.
+          <b>short stories</b>. charles stross, david langford, others. they fit an audhd head and the intent behind a
+          short story is concentrated by nature.
         </span>
       </li>
       <li>
-        <span>too many <b>are.na blocks</b>. probably more than is healthy.</span>
+        <span
+          >too many <b>are.na blocks</b>. probably more than is healthy, frankly. like short stories, they're
+          concentrated intent.</span
+        >
       </li>
     </ul>
 
     <h2 class="page-h2">listening</h2>
+    <iframe
+      width="600"
+      height="337"
+      src="https://www.youtube.com/embed/ZAi_nFiVekQ"
+      title="bodyimage - BOY DRUGS (Official Music Video)"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    <br />
+    <iframe
+      width="600"
+      height="337"
+      src="https://www.youtube.com/embed/4CmYE-fbVWc"
+      title="The Skinner Brothers - Nothing on Me (Official Music Video)"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    <br />
+    <iframe
+      width="600"
+      height="337"
+      src="https://www.youtube.com/embed/OPiDMM6YwFA"
+      title="Chase &amp; Status - No Problem"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+
     <ul class="diamond-list">
-      <li>
-        <span>
-          <b>the broadcast</b>
-          — dub techno. it's april. that's enough excuse.
-        </span>
-      </li>
-      <li>
-        <span>
-          <b>look mum no computer</b>
-          — tinkerer/musician. accidentally informative.
-        </span>
-      </li>
+      <li><span>wait, did I just reimplement myspace?</span></li>
     </ul>
 
     <h2 class="page-h2">not doing</h2>
     <ul class="diamond-list">
       <li>
-        <span><b>twitter / x</b> — quit it. not bragging.</span>
+        <span><b>twitter / x</b> - quit it, and so should you. fuck elon musk.</span>
       </li>
       <li>
-        <span><b>that side project from january</b> — it can wait. it has to.</span>
+        <span
+          ><b>tidying up</b> - i mean, it's not like my space is too bad. but still, the executive function eludes me
+          once more.</span
+        >
       </li>
       <li>
-        <span><b>on-call</b> — ate it for a year in 2020. never again.</span>
+        <span><b>a job</b> - for the love of god, hire me. hit that cv link at the top.</span>
       </li>
     </ul>
 
-    <div class="console mt-7">
+    <!-- <div class="console mt-7">
       <div>
         <span class="pr">&gt;</span>
-        <span class="mu">last cron job ran 3h ago — yes the site is alive</span>
+        <span class="mu">console output</span>
       </div>
-      <div>
-        <span class="pr">&gt;</span>
-        <span class="mu">if you got here from hacker news: hi. don't comment. read.</span>
-      </div>
-      <div>
-        <span class="pr">&gt;</span>
-        <span class="mu">if you got here from linkedin: i don't know how. close the tab.</span>
-      </div>
-    </div>
+    </div> -->
     <div class="mt-9 font-mono text-[11px] tracking-[0.08em] text-paper-3">
-      last meaningful update: 2026.04.20 · next: when i remember
+      last meaningful update: 2026.08.01 · next: when i remember
     </div>
   </div>
 </template>

@@ -19,7 +19,7 @@ _It has been reformatted to appear on a single page. You can always [**load the 
 
 ## Update on Medication Abortion
 
-On June 13, the Supreme Court issued a unanimous decision holding that the plaintiffs in FDA v. Alliance for Hippocratic Medicine lacked standing to challenge FDA's actions. Mifepristone - which FDA approved as safe and effective more than 20 years ago—remains available under the conditions of use approved by FDA.
+On June 13, the Supreme Court issued a unanimous decision holding that the plaintiffs in FDA v. Alliance for Hippocratic Medicine lacked standing to challenge FDA's actions. Mifepristone - which FDA approved as safe and effective more than 20 years ago-remains available under the conditions of use approved by FDA.
 
 [FDA v. Alliance for Hippocratic Medicine.pdf](files/blog/2025-01-23_reproductiverights-gov/FDA_v._Alliance_for_Hippocratic_Medicine.pdf)
 
@@ -55,7 +55,7 @@ In light of the Supreme Court's decision to overturn Roe v. Wade, it's more impo
 - If the hospital determines that you have an emergency medical condition, federal law requires the hospital to offer you treatment until your emergency medical condition is stabilized, or an appropriate transfer to another hospital if you need it.
 - An emergency medical condition includes any medical condition manifesting itself by acute symptoms and that, in the absence of immediate medical attention, could reasonably be expected to place the person's health in serious jeopardy. Emergency medical conditions involving pregnant patients may include, but are not limited to, ectopic pregnancy, complications of a pregnancy loss, or emergent hypertensive disorders, such as preeclampsia with severe features. In some instances, the treatment reasonably necessary to stabilize a pregnant woman's emergency medical condition may be an abortion.
 - These federal rights preempt any directly conflicting state laws or mandates that apply to sp*ecific procedures.*
-  - _Please note: pursuant to the injunction in Texas v. Becerra, No. 5:22-CV-185-H (N.D. Tex.), HHS may not enforce the following interpretations contained in the July 11, 2022, CMS guidance (and the corresponding letter sent the same day by HHS Secretary Becerra): (1) the Guidance and Letter's interpretation that Texas abortion laws are preempted by EMTALA; and (2) the Guidance and Letter's interpretation of EMTALA — both as to when an abortion is required and EMTALA's effect on state laws governing abortion — within the State of Texas or against the members of the American Association of Pro Life Obstetricians and Gynecologists (AAPLOG) and the Christian Medical and Dental Association (CMDA)._
+  - _Please note: pursuant to the injunction in Texas v. Becerra, No. 5:22-CV-185-H (N.D. Tex.), HHS may not enforce the following interpretations contained in the July 11, 2022, CMS guidance (and the corresponding letter sent the same day by HHS Secretary Becerra): (1) the Guidance and Letter's interpretation that Texas abortion laws are preempted by EMTALA; and (2) the Guidance and Letter's interpretation of EMTALA - both as to when an abortion is required and EMTALA's effect on state laws governing abortion - within the State of Texas or against the members of the American Association of Pro Life Obstetricians and Gynecologists (AAPLOG) and the Christian Medical and Dental Association (CMDA)._
 
 ### If you are a health care provider
 

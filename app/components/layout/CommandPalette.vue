@@ -163,7 +163,7 @@ useEventListener("keydown", (e: KeyboardEvent) => {
           v-if="filtered.length === 0"
           class="grid grid-cols-[auto_1fr_auto] items-center gap-3.5 border-b border-void-3 px-4 py-2.5 text-paper-3"
         >
-          <span class="font-mono text-[11px] tracking-[0.14em] text-paper-3">—</span>
+          <span class="font-mono text-[11px] tracking-[0.14em] text-paper-3">-</span>
           <div>
             <div class="font-sans text-[14px] text-paper">nothing matches.</div>
             <div class="font-mono text-[11px] tracking-[0.04em] text-paper-3">try less.</div>

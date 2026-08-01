@@ -1,5 +1,5 @@
 /* =====================================================================
-   syn.horse — global stylesheet
+   syn.horse - global stylesheet
    ---------------------------------------------------------------------
    Tailwind CSS v4 + daisyUI 5 + the syn.horse design tokens.
    ===================================================================== */
@@ -19,7 +19,7 @@
   prefersdark: true;
   color-scheme: dark;
 
-  /* surfaces — the void scale */
+  /* surfaces - the void scale */
   --color-base-100: #0d0221;
   --color-base-200: #14082e;
   --color-base-300: #1d0d3d;
@@ -33,7 +33,7 @@
   --color-accent: #b967ff;
   --color-accent-content: #0d0221;
 
-  /* neutral — paper-3 hairline grey for borders / muted ui */
+  /* neutral - paper-3 hairline grey for borders / muted ui */
   --color-neutral: #8b7aa8;
   --color-neutral-content: #fff7ff;
 
@@ -47,7 +47,7 @@
   --color-error: #ff003c;
   --color-error-content: #fff7ff;
 
-  /* shape — square by default, 2px on cards, pills only where named */
+  /* shape - square by default, 2px on cards, pills only where named */
   --radius-selector: 0;
   --radius-field: 0;
   --radius-box: 0.125rem;
@@ -56,7 +56,7 @@
   --size-selector: 0.25rem;
   --size-field: 0.25rem;
 
-  /* borders — 1px hairline */
+  /* borders - 1px hairline */
   --border: 1px;
 
   /* effects: no soft drop shadows, no built-in noise (we add our own) */
@@ -65,16 +65,16 @@
 }
 
 /* =====================================================================
-   Tailwind v4 design tokens — generates the utility classes:
+   Tailwind v4 design tokens - generates the utility classes:
    bg-void, text-hot, font-display, text-2xl, ease-snap, shadow-glow-hot
    ===================================================================== */
 @theme {
-  /* fonts — Inter is the default body font */
+  /* fonts - Inter is the default body font */
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-mono: "Space Mono", "SF Mono", Menlo, monospace;
   --font-display: "VT323", "Courier New", monospace;
 
-  /* spacing — 4px base. `p-1` = 4px, `p-2` = 8px, … `p-32` = 128px */
+  /* spacing - 4px base. `p-1` = 4px, `p-2` = 8px, … `p-32` = 128px */
   --spacing: 4px;
 
   /* type scale (1.25 modular, capped) */
@@ -104,7 +104,7 @@
   --ease-soft: cubic-bezier(0.16, 1, 0.3, 1);
 
   /* core palette */
-  --color-void-0: #070011; /* deepest void — backdrop for abandoned project cards */
+  --color-void-0: #070011; /* deepest void - backdrop for abandoned project cards */
   --color-void: #0d0221;
   --color-void-2: #14082e;
   --color-void-3: #1d0d3d;
@@ -127,7 +127,7 @@
   --color-danger-2: #cc002e;
   --color-ok: #62ffaa;
 
-  /* glow shadows — pink/cyan halo around interactive elements */
+  /* glow shadows - pink/cyan halo around interactive elements */
   --shadow-glow-hot: 0 0 24px rgb(255 113 206 / 0.4);
   --shadow-glow-hot-strong: 0 0 30px rgb(255 113 206 / 0.6);
   --shadow-glow-cool: 0 0 24px rgb(1 205 254 / 0.4);
@@ -136,7 +136,7 @@
   --shadow-pulse-ok: 0 0 8px #62ffaa;
   --shadow-inset-edge: inset 0 1px 0 rgb(255 255 255 / 0.06);
 
-  /* animations — keyframes defined below outside @theme */
+  /* animations - keyframes defined below outside @theme */
   --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
   --animate-scan-flicker: scan-flicker 4s ease-in-out infinite;
   --animate-grain-shift: grain-shift 1.2s steps(6) infinite;
@@ -145,7 +145,7 @@
 }
 
 /* =====================================================================
-   Keyframes — top-level so they're always emitted regardless of which
+   Keyframes - top-level so they're always emitted regardless of which
    utilities the build picks up.
    ===================================================================== */
 @keyframes pulse-glow {
@@ -262,7 +262,7 @@
 }
 
 /* =====================================================================
-   Base styles — resets and element typography. Tailwind's preflight
+   Base styles - resets and element typography. Tailwind's preflight
    handles most resets; this layer adds the project-specific defaults
    (page background, link reset, list reset, base headline sizes).
    ===================================================================== */
@@ -282,7 +282,7 @@
   }
   a {
     color: inherit;
-    text-decoration: none;
+    text-decoration: underline var(--accent-color, var(--color-hot));
   }
   button {
     font: inherit;
@@ -295,7 +295,7 @@
     list-style: none;
   }
 
-  /* default headline / body type — pages override sizes via utilities */
+  /* default headline / body type - pages override sizes via utilities */
   h1 {
     font-family: var(--font-display);
     font-size: var(--text-5xl);
@@ -342,12 +342,12 @@
 }
 
 /* =====================================================================
-   Reusable surface patterns — small named components that the design
+   Reusable surface patterns - small named components that the design
    uses everywhere. Each is built from Tailwind tokens so theme tweaks
    propagate. Anything appearing only once stays inline in templates.
    ===================================================================== */
 @layer components {
-  /* tags — mono uppercase pills used in projects, blog filters, cv stack */
+  /* tags - mono uppercase pills used in projects, blog filters, cv stack */
   .tg {
     display: inline-flex;
     padding: 2px 8px;
@@ -382,7 +382,7 @@
     border-color: var(--accent-color, var(--color-hot));
   }
 
-  /* eyebrow — mono uppercase label above page headlines */
+  /* eyebrow - mono uppercase label above page headlines */
   .eyebrow {
     font-family: var(--font-mono);
     font-size: 11px;
@@ -391,7 +391,7 @@
     letter-spacing: 0.14em;
   }
 
-  /* lede — paragraph lead text directly below page h1 */
+  /* lede - paragraph lead text directly below page h1 */
   .lede {
     max-width: 620px;
     margin-top: 4px;
@@ -400,7 +400,7 @@
     color: var(--color-paper-2);
   }
 
-  /* console — terminal-style code block, used on home/now/404/post */
+  /* console - terminal-style code block, used on home/now/404/post */
   .console {
     padding: 14px 18px;
     font-family: var(--font-mono);
@@ -424,7 +424,7 @@
     text-transform: uppercase;
   }
 
-  /* btn — outlined mono button used on cv and 404 pages */
+  /* btn - outlined mono button used on cv and 404 pages */
   .btn-syn {
     display: inline-block;
     padding: 8px 12px;
@@ -460,7 +460,7 @@
     border-color: var(--color-pop);
   }
 
-  /* form primitives — ported from _design/design-system/preview/components-inputs.html
+  /* form primitives - ported from _design/design-system/preview/components-inputs.html
      and re-tokenised onto the synhorse palette. The global focus-visible rule
      near the bottom of this file covers focused state for all inputs. */
   .field {
@@ -492,7 +492,7 @@
     letter-spacing: 0.08em;
   }
 
-  /* field-shell — wraps a .field with a relatively positioned parent so a small
+  /* field-shell - wraps a .field with a relatively positioned parent so a small
      status overlay (.field-counter) can sit at the bottom-right of a textarea
      or the right-center of a single-line input. Reserves padding on the field
      so the typed text never collides with the overlay. */
@@ -538,7 +538,7 @@
     bottom: 12px;
   }
 
-  /* panic actions — flex column on small viewports, row above 720px.
+  /* panic actions - flex column on small viewports, row above 720px.
      Red button grows to fill, green stays compact. */
   .panic-actions {
     display: flex;
@@ -555,8 +555,8 @@
     }
   }
 
-  /* panic-btn — the BIG RED BUTTON. Solid danger fill, display font, idle pulse.
-     The .green modifier is the "small green button" — modest, mono, ok-coloured.
+  /* panic-btn - the BIG RED BUTTON. Solid danger fill, display font, idle pulse.
+     The .green modifier is the "small green button" - modest, mono, ok-coloured.
      Class deliberately named .panic-btn (NOT .btn-…) to dodge daisyUI's .btn cascade. */
   .panic-btn {
     display: block;
@@ -623,12 +623,12 @@
     background: var(--color-ok);
   }
 
-  /* dot — accent period used after page titles (e.g. "now.") */
+  /* dot - accent period used after page titles (e.g. "now.") */
   .dot {
     color: var(--accent-color, var(--color-hot));
   }
 
-  /* home-card — clickable card used 4-6× per home variant */
+  /* home-card - clickable card used 4-6× per home variant */
   .home-card {
     display: block;
     padding: 18px 22px;
@@ -674,7 +674,7 @@
     letter-spacing: 0.08em;
   }
 
-  /* dotted-link — bottom-dotted underline link used in home + post bodies */
+  /* dotted-link - bottom-dotted underline link used in home + post bodies */
   .dotted-link {
     padding-bottom: 1px;
     color: var(--color-paper-2);
@@ -686,7 +686,7 @@
     border-color: var(--accent-color, var(--color-hot));
   }
 
-  /* footer-note — bottom strip used on home, contact, domains */
+  /* footer-note - bottom strip used on home, contact, domains */
   .footer-note {
     display: flex;
     flex-wrap: wrap;
@@ -701,7 +701,7 @@
     border-top: 1px solid var(--color-void-4);
   }
 
-  /* diamond-list — bulleted list with hot ◆ markers, used on /now and post bodies */
+  /* diamond-list - bulleted list with hot ◆ markers, used on /now and post bodies */
   .diamond-list {
     list-style: none;
   }
@@ -726,7 +726,7 @@
     color: var(--color-paper);
   }
 
-  /* page-h2 — section heading on /now, /cv, /projects, /contact, /domains */
+  /* page-h2 - section heading on /now, /cv, /projects, /contact, /domains */
   .page-h2 {
     margin: 40px 0 14px;
     font-family: var(--font-display);
@@ -735,7 +735,7 @@
     color: var(--color-paper);
   }
 
-  /* page-h1 — large display headline used on every secondary page */
+  /* page-h1 - large display headline used on every secondary page */
   .page-h1 {
     padding-bottom: 14px;
     font-family: var(--font-display);
@@ -744,7 +744,7 @@
     color: var(--color-paper);
   }
 
-  /* proj-* — project card used on /projects and inside /cv side-projects */
+  /* proj-* - project card used on /projects and inside /cv side-projects */
   .proj-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -800,7 +800,7 @@
     margin-top: 14px;
   }
 
-  /* abandoned project cards — appended to /projects only while konami mode is
+  /* abandoned project cards - appended to /projects only while konami mode is
      active (commandsEnabled). darker backdrop, faint pixel skull watermark and
      an epitaph in place of a url. these cards link nowhere. */
   .proj.abandoned {
@@ -834,7 +834,7 @@
     letter-spacing: 0.04em;
   }
 
-  /* graveyard reveal — TransitionGroup enter/leave for the abandoned cards,
+  /* graveyard reveal - TransitionGroup enter/leave for the abandoned cards,
      plus a move transition so the live cards slide as the dead ones fold into
      the year-sorted grid. translate + fade in the konami-in spirit. */
   .grave-enter-active,
@@ -855,7 +855,7 @@
     transition: transform 300ms var(--ease-snap);
   }
 
-  /* page shell — fixed-width column wrapper used by every secondary page */
+  /* page shell - fixed-width column wrapper used by every secondary page */
   .page-shell {
     position: relative;
     max-width: 920px;
@@ -951,7 +951,7 @@
     border-bottom: 1px dotted var(--color-cool);
   }
 
-  /* post — single blog entry */
+  /* post - single blog entry */
   .post-crumb {
     font-family: var(--font-mono);
     font-size: 11px;
@@ -1240,7 +1240,7 @@
      column, shrink the oversized display type with clamp() so it scales
      with the viewport, and tighten the page gutters. The 767.98px ceiling
      sits one hairline below Tailwind's `md` breakpoint (min-width: 768px)
-     so the two never both match at exactly 768px — same fractional trick
+     so the two never both match at exactly 768px - same fractional trick
      Tailwind's own `max-md:` variant uses. Kept inside @layer components
      so it composes with the component
      classes above by source order (later wins) rather than fighting
@@ -1268,9 +1268,9 @@
       font-size: 36px;
     }
 
-    /* now — diamond lists already stack; nothing extra needed */
+    /* now - diamond lists already stack; nothing extra needed */
 
-    /* projects — two-up grid collapses; year / title / body / url stack */
+    /* projects - two-up grid collapses; year / title / body / url stack */
     .proj-grid {
       grid-template-columns: 1fr;
     }
@@ -1282,7 +1282,7 @@
       font-size: 30px;
     }
 
-    /* blog index — date / title / read stack */
+    /* blog index - date / title / read stack */
     .blog-row {
       grid-template-columns: 1fr;
       gap: 6px;
@@ -1291,7 +1291,7 @@
       white-space: normal;
     }
 
-    /* cv — role meta sits above the body, talks single column */
+    /* cv - role meta sits above the body, talks single column */
     .cv-role {
       grid-template-columns: 1fr;
       gap: 8px;
@@ -1304,13 +1304,13 @@
       text-align: left;
     }
 
-    /* panic — the BIG RED BUTTON scales down to fit */
+    /* panic - the BIG RED BUTTON scales down to fit */
     .panic-btn {
       padding: 24px 20px;
       font-size: clamp(30px, 9vw, 40px);
     }
 
-    /* 404 — 280px numerals are far wider than a phone */
+    /* 404 - 280px numerals are far wider than a phone */
     .notfound {
       padding: 56px 20px;
     }
@@ -1328,7 +1328,7 @@
 }
 
 /* =====================================================================
-   Effect components — fixed full-bleed overlays + chromatic aberration
+   Effect components - fixed full-bleed overlays + chromatic aberration
    on hover. Live in @layer components so they participate in the
    Tailwind cascade and can be combined with `dark:`, `hover:`, etc.
    ===================================================================== */
@@ -1510,7 +1510,7 @@
   }
 }
 
-/* Focus ring — visible, ugly on purpose. Applies to every interactive
+/* Focus ring - visible, ugly on purpose. Applies to every interactive
    element so we don't have to remember to add a class. */
 button:focus-visible,
 a:focus-visible,
@@ -1523,7 +1523,7 @@ select:focus-visible,
   box-shadow: var(--shadow-glow-cool);
 }
 
-/* Dialog inputs (e.g. command palette) get no extra ring — the dialog's
+/* Dialog inputs (e.g. command palette) get no extra ring - the dialog's
    own border serves as the focus indicator for the contained context. */
 [role="dialog"] input:focus-visible {
   outline: 0;
@@ -1531,7 +1531,7 @@ select:focus-visible,
 }
 
 /* =====================================================================
-   Reduced motion — kill the loud animations for users who've asked.
+   Reduced motion - kill the loud animations for users who've asked.
    ===================================================================== */
 @media (prefers-reduced-motion: reduce) {
   .fx-scan,

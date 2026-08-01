@@ -72,7 +72,7 @@ useSeoMeta({
       </div>
       <div class="right">
         <p>
-          i can put you in touch with eng managers, peers, and direct reports. names + contact details on request — i'm
+          i can put you in touch with eng managers, peers, and direct reports. names + contact details on request - i'm
           not putting them on a public page.
         </p>
       </div>

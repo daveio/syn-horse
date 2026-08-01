@@ -67,7 +67,7 @@ const slug = computed(() => {
       <ClientOnly>
         <span class="text-cool tabular-nums">{{ buildAge }}</span>
         <template #fallback>
-          <span class="text-cool tabular-nums">—</span>
+          <span class="text-cool tabular-nums">-</span>
         </template>
       </ClientOnly>
     </span>

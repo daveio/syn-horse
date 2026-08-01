@@ -5,11 +5,11 @@
 - [x] abandoned projects which appear when in konami code mode and disappear otherwise (folded into the year-sorted project grid, animated in/out)
 - [ ] create API endpoint for the notification endpoint to write logs to the DB, so that we can remove the notification worker's DB binding and the underlying DB, and write to our primary DB.
 - [ ] add retry policy + dead-letter handling on the consumer side once it lands.
-- [ ] consider a second `Pager` implementation on the producer side (e.g. a direct synchronous channel) if/when needed — extend `usePager()` to choose based on channel or runtime config.
+- [ ] consider a second `Pager` implementation on the producer side (e.g. a direct synchronous channel) if/when needed - extend `usePager()` to choose based on channel or runtime config.
 - [ ] decide whether to keep `status = "queued"` rows visible to any future admin UI as in-flight states, vs treating them as failed after a TTL if no consumer-side `delivered` / `delivery_failed` update arrives.
-- [ ] RSS feed at `/feed.xml` — currently linked from the home and blog footers but returns 404. Wants a `server/routes/feed.xml.ts` reading from a `queryCollection`. **(designed & independently reviewed — full spec in `APP.md` §15; ready to implement)**
-- [ ] review `PUBSUB.md` (2026-07-02) and pick a websocket transport for the digital signage device — recommended: dedicated realtime worker + hibernating durable object; build `/api/signage/state` with `ETag` first whichever option wins
-- [ ] mobile breakpoints — the source design ships no `@media` queries; some headings overflow narrow viewports
+- [ ] RSS feed at `/feed.xml` - currently linked from the home and blog footers but returns 404. Wants a `server/routes/feed.xml.ts` reading from a `queryCollection`. **(designed & independently reviewed - full spec in `APP.md` §15; ready to implement)**
+- [ ] review `PUBSUB.md` (2026-07-02) and pick a websocket transport for the digital signage device - recommended: dedicated realtime worker + hibernating durable object; build `/api/signage/state` with `ETag` first whichever option wins
+- [ ] mobile breakpoints - the source design ships no `@media` queries; some headings overflow narrow viewports
 
 ## review recommendations (2026-05-09)
 
@@ -58,11 +58,11 @@
 - [ ] verify whether `public/_robots.txt` and `app/assets/robots.txt` are intentional. Neither is a plain `public/robots.txt`; confirm `@nuxtjs/seo` is serving the desired robots response and remove duplicates if not needed.
 - [ ] revisit production observability settings after launch. `head_sampling_rate: 1`, invocation logs, server source maps, and `upload_source_maps` are useful during bring-up but may be noisy or too revealing long-term.
 - [ ] reconcile R2 binding drift uncovered while writing `APP.md`: the bucket name differs between `hub.blob.bucketName` (`blob-syn-horse`) and the deploy `r2_buckets` block in `nuxt.config.ts` (`syn-horse`). Confirm which bucket the `BLOB` binding actually resolves to before building anything on R2.
-- [ ] fix the dev `KV` namespace id in `wrangler.dev.jsonc` — it has 33 hex chars (`3fa198f1477f456c8d27eb9a72562a4bf`, trailing `f`) versus the 32-char deploy id in `nuxt.config.ts` (`3fa198f1477f456c8d27eb9a72562a4b`). Harmless in Miniflare (id is only a local state key) but keep them identical so local KV state lines up with intent.
+- [ ] fix the dev `KV` namespace id in `wrangler.dev.jsonc` - it has 33 hex chars (`3fa198f1477f456c8d27eb9a72562a4bf`, trailing `f`) versus the 32-char deploy id in `nuxt.config.ts` (`3fa198f1477f456c8d27eb9a72562a4b`). Harmless in Miniflare (id is only a local state key) but keep them identical so local KV state lines up with intent.
 
 ### docs and repo hygiene
 
-- [ ] update `DB.md` to match the current schema — it still describes `redirects` as active even though `server/db/schema.ts` only defines `panic_pages`. (`redirects` was never a Drizzle table, only `sql/redirects.sql`; `AGENTS.md`/`README.md` already corrected.)
+- [ ] update `DB.md` to match the current schema - it still describes `redirects` as active even though `server/db/schema.ts` only defines `panic_pages`. (`redirects` was never a Drizzle table, only `sql/redirects.sql`; `AGENTS.md`/`README.md` already corrected.)
 - [ ] align `DB.md` migration wording with `AGENTS.md`/`README.md`: local migrations auto-apply via NuxtHub on `bun run dev`; remote (`bun run db:migrate:remote`) stays explicit.
 - [ ] update `.env.example` to distinguish active settings from leftovers. It lists OpenRouter, Anthropic, Linear, ControlD, and Sentry variables that do not appear in the current app/server code.
 - [ ] either refresh or remove `docs/RECOMMENDATIONS.md`; it reads like an older generic review and now overlaps/conflicts with this checkbox backlog.

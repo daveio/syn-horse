@@ -277,7 +277,7 @@ export default defineNuxtConfig({
     },
     // unwasm can't lift shiki's onig.wasm `env` host-imports into ES imports
     // (Emscripten output isn't lift-able), so it falls back to shiki's inlined
-    // `wasm.mjs` glue — the canonical path. Silence the noisy fallback warning.
+    // `wasm.mjs` glue - the canonical path. Silence the noisy fallback warning.
     wasm: {
       silent: true,
     },

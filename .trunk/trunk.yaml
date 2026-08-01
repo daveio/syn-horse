@@ -29,7 +29,7 @@ lint:
     - oxipng@10.1.1
     - actionlint@1.7.12
     - checkov@3.3.8
-    - eslint@10.7.0
+    - eslint@10.8.0
     - git-diff-check
     - markdownlint@0.49.1
     - prettier@3.9.6

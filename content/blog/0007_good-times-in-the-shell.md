@@ -88,7 +88,7 @@ It will be installed in the list of plugins below, starting its config routine w
 
 The [`fisher`](https://github.com/jorgebucaran/fisher) plugin manager is a must-have. It does what it does quietly and without any hassle.
 
-Here is my `~/.config/fish/fish_plugins` —
+Here is my `~/.config/fish/fish_plugins` -
 
 ```bash
 # Plugin manager

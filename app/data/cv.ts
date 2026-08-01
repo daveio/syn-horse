@@ -21,7 +21,7 @@ export interface SideProject {
 
 export const CV_ROLES: CvRole[] = [
   {
-    dt: "2023 — now",
+    dt: "2023 - now",
     place: "ambio.systems",
     loc: "remote · uk",
     title: "staff devops engineer",
@@ -29,7 +29,7 @@ export const CV_ROLES: CvRole[] = [
     stack: ["terraform", "nomad", "cloudflare", "rust", "typescript"],
   },
   {
-    dt: "2021 — 2023",
+    dt: "2021 - 2023",
     place: "tecapps",
     loc: "remote",
     title: "senior site reliability engineer",
@@ -37,7 +37,7 @@ export const CV_ROLES: CvRole[] = [
     stack: ["kubernetes", "prometheus", "grafana", "aws", "go"],
   },
   {
-    dt: "2019 — 2021",
+    dt: "2019 - 2021",
     place: "a fintech you've heard of",
     loc: "london · uk",
     title: "devops engineer",
@@ -45,7 +45,7 @@ export const CV_ROLES: CvRole[] = [
     stack: ["jenkins", "aws", "python", "ansible"],
   },
   {
-    dt: "2016 — 2019",
+    dt: "2016 - 2019",
     place: "a startup that died gracefully",
     loc: "london · uk",
     title: "sysadmin / generalist",
@@ -92,11 +92,11 @@ export const SIDE: SideProject[] = [
   {
     name: "a small zine",
     desc: "one issue a year. essays + photographs. printed at home on a riso clone.",
-    yr: "2024 — now",
+    yr: "2024 - now",
   },
   {
     name: "community organising",
     desc: "a local mutual-aid mesh + a small queer tech reading group.",
-    yr: "2022 — now",
+    yr: "2022 - now",
   },
 ]

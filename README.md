@@ -25,7 +25,7 @@ If you would rather manage tools yourself: Node 24.16.0, Bun 1.3.14.
 bun run dev
 ```
 
-Boots the Nuxt dev server on `http://localhost:3000`. Cloudflare bindings (D1, KV, Cache, R2, the `NOTIFICATIONS` queue, version metadata, vars) are wired through nitropack's built-in `cloudflare-dev` preset, which reads `wrangler.dev.jsonc` via `nitro.cloudflareDev.configPath` in `nuxt.config.ts`. AI, Browser, Images, and Analytics bindings exist in production but aren't emulated locally — they need an authenticated remote-bindings session, so they're left commented out in `wrangler.dev.jsonc` until dev code needs them.
+Boots the Nuxt dev server on `http://localhost:3000`. Cloudflare bindings (D1, KV, Cache, R2, the `NOTIFICATIONS` queue, version metadata, vars) are wired through nitropack's built-in `cloudflare-dev` preset, which reads `wrangler.dev.jsonc` via `nitro.cloudflareDev.configPath` in `nuxt.config.ts`. AI, Browser, Images, and Analytics bindings exist in production but aren't emulated locally - they need an authenticated remote-bindings session, so they're left commented out in `wrangler.dev.jsonc` until dev code needs them.
 
 ## Production
 
@@ -60,7 +60,7 @@ bun run db:studio           # drizzle-kit studio (browse the schema)
 - **Drizzle config:** `drizzle.config.ts` at repo root (sqlite dialect, schema + out path wired).
 - **D1 binding:** `DB`. Declared in both `nuxt.config.ts` (deploy) and `wrangler.dev.jsonc` (dev). Database name is `syn-horse`.
 - **Server-side access:** `useDb(event)` from `server/utils/db.ts` returns a Drizzle client over `event.context.cloudflare.env.DB`. Auto-imported in server scope.
-- **Migration tooling:** the wrangler CLI, not NuxtHub's auto-runner — migrations live at a non-default path so NuxtHub's plugin doesn't see them.
+- **Migration tooling:** the wrangler CLI, not NuxtHub's auto-runner - migrations live at a non-default path so NuxtHub's plugin doesn't see them.
 
 ### Schema-driven enums (single source of truth)
 
@@ -78,32 +78,32 @@ export type Channel = (typeof panicPages.$inferSelect)["channel"]
 export type PageStatus = (typeof panicPages.$inferSelect)["status"]
 ```
 
-- **Frontend types:** `import type { Channel } from "~~/server/db/schema"` in any `.vue` or `.ts` file. Type-only imports are erased at compile time, so the client bundle never pulls the schema module — only the union literal travels.
-- **Server-side runtime validation:** `z.enum(panicPages.channel.enumValues)` — `enumValues` is Drizzle's typed runtime tuple, so the Zod validator and TypeScript stay in lockstep.
+- **Frontend types:** `import type { Channel } from "~~/server/db/schema"` in any `.vue` or `.ts` file. Type-only imports are erased at compile time, so the client bundle never pulls the schema module - only the union literal travels.
+- **Server-side runtime validation:** `z.enum(panicPages.channel.enumValues)` - `enumValues` is Drizzle's typed runtime tuple, so the Zod validator and TypeScript stay in lockstep.
 - **SQL:** Drizzle's SQLite `enum` option is a TypeScript-only constraint; the column stays plain `TEXT` and `bun run db:generate` won't emit a diff when you only touch the enum array. Add a manual `CHECK (col IN (...))` clause to a migration if you also want database-level enforcement.
 
-Adding or removing a value is a one-line edit to the schema array — TypeScript then surfaces every site that needs to handle it.
+Adding or removing a value is a one-line edit to the schema array - TypeScript then surfaces every site that needs to handle it.
 
 ### Why migrate scripts pass `--config wrangler.dev.jsonc`
 
-There's intentionally no `wrangler.{json,jsonc,toml}` at the repo root: nitropack's cloudflare preset and the wrangler CLI both auto-discover those filenames and would `defu`-merge with the inline `nitro.cloudflare.wrangler` block in `nuxt.config.ts` — every binding would end up duplicated in `.output/server/wrangler.json`.
+There's intentionally no `wrangler.{json,jsonc,toml}` at the repo root: nitropack's cloudflare preset and the wrangler CLI both auto-discover those filenames and would `defu`-merge with the inline `nitro.cloudflare.wrangler` block in `nuxt.config.ts` - every binding would end up duplicated in `.output/server/wrangler.json`.
 
 `wrangler.dev.jsonc` is deliberately non-discoverable. It carries the dev binding subset for Miniflare AND the `migrations_dir` that wrangler's `d1 migrations apply` needs. The `db:migrate:{local,remote}` scripts pass `--config wrangler.dev.jsonc` so wrangler reads from there. Same file works for both `--local` (Miniflare) and `--remote` (production D1) because wrangler routes by flag, not by config.
 
 ### Day-to-day loop
 
-1. Edit `server/db/schema.ts` — add or modify tables.
-2. `bun run db:generate` — `drizzle-kit generate` writes a new `00NN_*.sql` under `server/db/migrations/sqlite/` and updates `meta/_journal.json`.
+1. Edit `server/db/schema.ts` - add or modify tables.
+2. `bun run db:generate` - `drizzle-kit generate` writes a new `00NN_*.sql` under `server/db/migrations/sqlite/` and updates `meta/_journal.json`.
 3. Inspect the generated SQL. If it's a destructive change, sanity-check against data you don't want to lose.
 4. Apply locally with `bun run db:migrate:local`. Test with `bun run dev`.
-5. Apply to production with `bun run db:migrate:remote` — before deploy if new code references new tables, after if only adding indexes / non-required columns.
+5. Apply to production with `bun run db:migrate:remote` - before deploy if new code references new tables, after if only adding indexes / non-required columns.
 6. `bun run deploy` if you also changed worker code.
 
 ### Bringing a cold environment up to date
 
 If you're applying to a database that has tables but no `d1_migrations` tracking table, wrangler will try to re-run migration 0000 and fail with `table already exists`. Detect and fix:
 
-**Step 1** — inspect the target database
+**Step 1** - inspect the target database
 
 ```bash
 bun run wrangler d1 execute syn-horse --remote --config wrangler.dev.jsonc \
@@ -119,14 +119,14 @@ bun run wrangler d1 execute syn-horse --remote --config wrangler.dev.jsonc \
 
 Swap `--remote` for `--local` to inspect the local Miniflare database.
 
-**Step 2** — apply, depending on what you saw
+**Step 2** - apply, depending on what you saw
 
 | State                                                   | What to do                                               |
 | ------------------------------------------------------- | -------------------------------------------------------- |
-| `panic_pages` already has the queue-era columns         | Nothing — skip to Step 3.                                |
+| `panic_pages` already has the queue-era columns         | Nothing - skip to Step 3.                                |
 | `panic_pages` present, `d1_migrations` has the 0000 row | `bun run db:migrate:remote` (or `:local`).               |
 | `panic_pages` present but no `d1_migrations` 0000 row   | Backfill the tracking row first (see below), then apply. |
-| Empty                                                   | `bun run db:migrate:remote` — all three run from clean.  |
+| Empty                                                   | `bun run db:migrate:remote` - all three run from clean.  |
 
 To backfill the tracking row:
 
@@ -137,9 +137,9 @@ bun run wrangler d1 execute syn-horse --remote --config wrangler.dev.jsonc \
 bun run db:migrate:remote
 ```
 
-Same recipe works for local — swap `--remote` for `--local` and use `db:migrate:local`.
+Same recipe works for local - swap `--remote` for `--local` and use `db:migrate:local`.
 
-**Step 3** — verify
+**Step 3** - verify
 
 ```bash
 bun run wrangler d1 execute syn-horse --remote --config wrangler.dev.jsonc \
@@ -150,7 +150,7 @@ Should list at least `d1_migrations`, `panic_pages`, `sqlite_sequence`.
 
 ### Adjacent production requirements
 
-- **Turnstile secret key.** `NUXT_TURNSTILE_SECRET_KEY` must be set as a Workers secret — without it, `verifyTurnstileToken` returns `{ success: false }` and every `/panic` submission 403s:
+- **Turnstile secret key.** `NUXT_TURNSTILE_SECRET_KEY` must be set as a Workers secret - without it, `verifyTurnstileToken` returns `{ success: false }` and every `/panic` submission 403s:
 
   ```bash
   bun run wrangler secret put NUXT_TURNSTILE_SECRET_KEY
@@ -170,30 +170,30 @@ Should list at least `d1_migrations`, `panic_pages`, `sqlite_sequence`.
 | `/cv`          | Boring resume version                                                   |
 | `/contact`     | Email, signal, the rest                                                 |
 | `/domains`     | The syn.\* family                                                       |
-| `/panic`       | Page syn — red button for emergencies, green button for everything else |
+| `/panic`       | Page syn - red button for emergencies, green button for everything else |
 
 ## Paging
 
 `/panic` POSTs to `POST /api/panic`, which validates the form, checks Turnstile (production only), records the attempt in the `panic_pages` D1 table (`status`: `queued` or `send_failed`), and hands the message to a Cloudflare Queue (`NOTIFICATIONS` → `syn-horse-notifications`) via `usePager()` in `server/utils/pager.ts`.
 
-A separate Worker — the `syn-horse-notifications` queue consumer — runs each message through a four-stage pipeline: logging → per-source rate limits (KV) → AI moderation → delivery (email / ntfy / Pushover adapters). The wire format is a strict `{ channel, contact, message, source? }` envelope; moderation and the real delivery adapters are scaffolded but not yet live, so today delivery is an intentional no-op stub.
+A separate Worker - the `syn-horse-notifications` queue consumer - runs each message through a four-stage pipeline: logging → per-source rate limits (KV) → AI moderation → delivery (email / ntfy / Pushover adapters). The wire format is a strict `{ channel, contact, message, source? }` envelope; moderation and the real delivery adapters are scaffolded but not yet live, so today delivery is an intentional no-op stub.
 
 ## Easter eggs
 
 - Press `/` anywhere to open the command palette.
 - Up Up Down Down Left Right Left Right B A.
-- `/sudo`, `/git`, `/gpg/agent`, `/gpg/config`, `/ssh/config` — config files served as plain text. SSH public keys at `/ssh/keys`.
+- `/sudo`, `/git`, `/gpg/agent`, `/gpg/config`, `/ssh/config` - config files served as plain text. SSH public keys at `/ssh/keys`.
 
 ## Tech
 
 - [Nuxt 4](https://nuxt.com) with `compatibilityVersion: 4`
-- [@nuxt/content](https://content.nuxt.com) — drives the blog: a `blog` collection (`content/blog/*.md`, schema in `content.config.ts`) queried at runtime with `queryCollection("blog")`
-- [@nuxt/fonts](https://fonts.nuxt.com) — loads VT323, Inter and Space Mono via the Google provider
-- [@nuxthub/core](https://hub.nuxt.com) — provides the KV and R2 bindings
-- [nuxt-security](https://nuxt-security.com) — SRI, hashed scripts and styles, security headers
-- [Drizzle ORM](https://orm.drizzle.team) — D1-backed; the `/panic` endpoint validates, records to a `panic_pages` table, and enqueues to the `NOTIFICATIONS` queue (see [Paging](#paging)). Auto-imported `useDb(event)` helper lives in `server/utils/db.ts`.
-- [@nuxtjs/turnstile](https://github.com/nuxt-modules/turnstile) — Cloudflare Turnstile widget on `/panic`; `verifyTurnstileToken` runs on the server
-- [Tailwind CSS v4](https://tailwindcss.com) and [daisyUI 5](https://daisyui.com), wired with a single bespoke `synhorse` theme — the design tokens (palette, type scale, spacing, glow shadows, animations) live in `app/assets/css/main.css` under `@theme`, and daisyUI's semantic roles (`primary`, `secondary`, `accent`, `base-100`, …) map onto them.
+- [@nuxt/content](https://content.nuxt.com) - drives the blog: a `blog` collection (`content/blog/*.md`, schema in `content.config.ts`) queried at runtime with `queryCollection("blog")`
+- [@nuxt/fonts](https://fonts.nuxt.com) - loads VT323, Inter and Space Mono via the Google provider
+- [@nuxthub/core](https://hub.nuxt.com) - provides the KV and R2 bindings
+- [nuxt-security](https://nuxt-security.com) - SRI, hashed scripts and styles, security headers
+- [Drizzle ORM](https://orm.drizzle.team) - D1-backed; the `/panic` endpoint validates, records to a `panic_pages` table, and enqueues to the `NOTIFICATIONS` queue (see [Paging](#paging)). Auto-imported `useDb(event)` helper lives in `server/utils/db.ts`.
+- [@nuxtjs/turnstile](https://github.com/nuxt-modules/turnstile) - Cloudflare Turnstile widget on `/panic`; `verifyTurnstileToken` runs on the server
+- [Tailwind CSS v4](https://tailwindcss.com) and [daisyUI 5](https://daisyui.com), wired with a single bespoke `synhorse` theme - the design tokens (palette, type scale, spacing, glow shadows, animations) live in `app/assets/css/main.css` under `@theme`, and daisyUI's semantic roles (`primary`, `secondary`, `accent`, `base-100`, …) map onto them.
 
 ## Project layout
 
@@ -213,26 +213,26 @@ app/
   data/                        # typed content modules (projects, cv, domains, social, im, commands)
   layouts/default.vue
   pages/                       # index, now, projects, cv, contact, domains, blog/
-content/blog/                  # markdown posts — live @nuxt/content source
+content/blog/                  # markdown posts - live @nuxt/content source
 public/                        # static assets, easter-egg config files
 server/
   api/                         # Nitro API routes (panic.post.ts → POST /api/panic)
   db/                          # drizzle schema + migrations (sqlite/)
   utils/                       # auto-imported server helpers (useDb)
-_design/                       # design system + candidate site export — frozen reference
+_design/                       # design system + candidate site export - frozen reference
 nuxt.config.ts
 content.config.ts              # @nuxt/content collection definition
 ```
 
 ## Design
 
-The full design system lives at `_design/design-system/` — colour swatches, type scale, component cards, brand voice. The candidate build that this repo implements is `_design/site/`. Both were exported from Claude Design and should be treated as a frozen reference.
+The full design system lives at `_design/design-system/` - colour swatches, type scale, component cards, brand voice. The candidate build that this repo implements is `_design/site/`. Both were exported from Claude Design and should be treated as a frozen reference.
 
 Tokens that drive every visual decision live in the `@theme` block at the top of `app/assets/css/main.css`. The pixel mark in the nav is `public/assets/logo-mark.svg`; the wordmark next to it is rendered as text.
 
 ## Deferred work
 
-See [TODO.md](./TODO.md) for the running list of intentional deferrals — chiefly: an RSS feed, richer post-body styling, wiring the OG image templates, and mobile breakpoints.
+See [TODO.md](./TODO.md) for the running list of intentional deferrals - chiefly: an RSS feed, richer post-body styling, wiring the OG image templates, and mobile breakpoints.
 
 ## Licence
 

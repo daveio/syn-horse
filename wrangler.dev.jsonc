@@ -5,7 +5,7 @@
 //
 // Why a non-standard filename: nitropack's cloudflare preset and wrangler CLI
 // both auto-discover `wrangler.{json,jsonc,toml}` and would `defu`-merge the
-// contents into the generated deploy config — every binding ends up declared
+// contents into the generated deploy config - every binding ends up declared
 // twice in `.output/server/wrangler.json`. A non-`wrangler.{json,jsonc,toml}`
 // name is invisible to those auto-discoverers, so the deploy path stays clean
 // while dev still gets the bindings it needs.
@@ -14,7 +14,7 @@
 // `getPlatformProxy()` switches to a remote (authenticated) edge-preview session
 // the moment any binding lacks local Miniflare emulation. AI, BROWSER, IMAGES
 // and analytics-engine datasets all force that remote mode and will fail without
-// Cloudflare API credentials — so they're commented out below. Uncomment them
+// Cloudflare API credentials - so they're commented out below. Uncomment them
 // (and arrange auth) if/when dev code starts using them.
 //
 // Binding IDs duplicate the ones in `nuxt.config.ts` `nitro.cloudflare.wrangler`
@@ -50,7 +50,7 @@
   },
   "version_metadata": { "binding": "CF_VERSION_METADATA" }
 
-  // Remote-only bindings — uncomment these (and authenticate locally) when dev
+  // Remote-only bindings - uncomment these (and authenticate locally) when dev
   // code starts using them. Leaving them in as a reference for the deploy-side
   // shape the production wrangler config (in `nuxt.config.ts`) declares.
   //

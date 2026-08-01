@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from "vue"
 
-// Random 8-hex page-fault address — only generated on the client to
+// Random 8-hex page-fault address - only generated on the client to
 // keep SSR output stable.
 const fault = ref<string>("00000000")
 
@@ -26,7 +26,7 @@ onMounted(() => {
       <div><span class="pr">syn@horse</span> <span class="mu">~/$</span> dmesg | tail</div>
       <div class="mu">
         → kernel: page fault at 0x{{ fault }}
-        — request was nonsense
+        - request was nonsense
       </div>
       <div class="mu">→ kernel: i checked. it's not here. it never was.</div>
       <div class="mu">→ kernel: type the url next time. don't trust shortcuts.</div>

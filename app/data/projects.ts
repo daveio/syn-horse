@@ -72,7 +72,7 @@ export const PROJECTS: Project[] = [
   },
 ]
 
-// abandoned projects — revealed on /projects only when konami mode is active.
+// abandoned projects - revealed on /projects only when konami mode is active.
 // these are placeholders; swap in real dead projects. they link nowhere, so an
 // epitaph (cause of death) takes the place of a live project's url.
 export interface AbandonedProject {
