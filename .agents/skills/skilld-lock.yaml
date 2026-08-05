@@ -15,10 +15,11 @@ skills:
     generator: skilld
   nuxt-icon-skilld:
     packageName: "@nuxt/icon"
-    version: 2.3.1
+    version: 2.4.1
+    packages: "@nuxt/icon@2.4.1"
     repo: nuxt/icon
     source: "https://stackblitz.com/edit/nuxt-icon-playground?file=app.vue/**"
-    syncedAt: 2026-07-20
+    syncedAt: 2026-08-04
     generator: skilld
   nuxt-content-skilld:
     packageName: "@nuxt/content"
@@ -30,10 +31,11 @@ skills:
     generator: skilld
   nuxt-image-skilld:
     packageName: "@nuxt/image"
-    version: 2.0.0
+    version: 2.1.0
+    packages: "@nuxt/image@2.1.0"
     repo: nuxt/image
-    source: "https://github.com/nuxt/image/tree/v2.0.0/docs"
-    syncedAt: 2026-07-20
+    source: "https://github.com/nuxt/image/tree/v2.1.0/docs"
+    syncedAt: 2026-08-04
     generator: skilld
   nuxt-scripts-skilld:
     packageName: "@nuxt/scripts"
@@ -52,11 +54,11 @@ skills:
     generator: skilld
   nuxtjs-seo-skilld:
     packageName: "@nuxtjs/seo"
-    version: 5.3.6
-    packages: "@nuxtjs/seo@5.3.6"
+    version: 5.3.10
+    packages: "@nuxtjs/seo@5.3.10"
     repo: harlan-zw/nuxt-seo
-    source: "https://github.com/harlan-zw/nuxt-seo/tree/v5.3.6/docs"
-    syncedAt: 2026-07-24
+    source: "https://github.com/harlan-zw/nuxt-seo/tree/v5.3.10/docs"
+    syncedAt: 2026-08-04
     generator: skilld
   libsql-client-skilld:
     packageName: "@libsql/client"
@@ -81,35 +83,35 @@ skills:
     generator: skilld
   takumi-rs-core-skilld:
     packageName: "@takumi-rs/core"
-    version: 2.5.0
-    packages: "@takumi-rs/core@2.5.0"
+    version: 2.5.6
+    packages: "@takumi-rs/core@2.5.6"
     repo: kane50613/takumi
     source: "https://github.com/kane50613/takumi/tree/master/docs"
-    syncedAt: 2026-07-27
+    syncedAt: 2026-08-04
     generator: skilld
   takumi-rs-wasm-skilld:
     packageName: "@takumi-rs/wasm"
-    version: 2.5.0
-    packages: "@takumi-rs/wasm@2.5.0"
+    version: 2.5.6
+    packages: "@takumi-rs/wasm@2.5.6"
     repo: kane50613/takumi
     source: "https://github.com/kane50613/takumi/tree/master/docs"
-    syncedAt: 2026-07-27
+    syncedAt: 2026-08-04
     generator: skilld
   better-sqlite3-skilld:
     packageName: better-sqlite3
-    version: 13.0.1
-    packages: "better-sqlite3@13.0.1"
+    version: 13.0.2
+    packages: "better-sqlite3@13.0.2"
     repo: WiseLibs/better-sqlite3
-    source: "https://github.com/WiseLibs/better-sqlite3/tree/v13.0.1/docs"
-    syncedAt: 2026-07-22
+    source: "https://github.com/WiseLibs/better-sqlite3/tree/v13.0.2/docs"
+    syncedAt: 2026-08-04
     generator: skilld
   daisyui-skilld:
     packageName: daisyui
-    version: 5.7.4
-    packages: "daisyui@5.7.4"
+    version: 5.7.16
+    packages: "daisyui@5.7.16"
     repo: saadeghi/daisyui
-    source: "https://github.com/saadeghi/daisyui/tree/v5.7.4/docs"
-    syncedAt: 2026-07-27
+    source: "https://github.com/saadeghi/daisyui/tree/v5.7.16/docs"
+    syncedAt: 2026-08-04
     generator: skilld
   drizzle-kit-skilld:
     packageName: drizzle-kit
@@ -199,11 +201,11 @@ skills:
     generator: skilld
   anthropic-ai-claude-code-skilld:
     packageName: "@anthropic-ai/claude-code"
-    version: 2.1.220
-    packages: "@anthropic-ai/claude-code@2.1.220"
+    version: 2.1.222
+    packages: "@anthropic-ai/claude-code@2.1.222"
     repo: Exhen/claude-code-2.1.88
-    source: "ungh://Exhen/claude-code-2.1.88"
-    syncedAt: 2026-07-27
+    source: "file:///Users/syn/src/github.com/synmux/syn-horse/node_modules/@anthropic-ai/claude-code/README.md"
+    syncedAt: 2026-08-04
     generator: skilld
   catppuccin-tailwindcss-skilld:
     packageName: "@catppuccin/tailwindcss"
@@ -214,10 +216,11 @@ skills:
     generator: skilld
   storybloq-storybloq-skilld:
     packageName: "@storybloq/storybloq"
-    version: 1.8.0
+    version: 1.8.1
+    packages: "@storybloq/storybloq@1.8.1"
     repo: Storybloq/storybloq
     source: "https://github.com/Storybloq/storybloq/tree/main/docs"
-    syncedAt: 2026-07-20
+    syncedAt: 2026-08-04
     generator: skilld
   tailwindcss-cli-skilld:
     packageName: "@tailwindcss/cli"
@@ -228,18 +231,19 @@ skills:
     generator: skilld
   ctx7-skilld:
     packageName: ctx7
-    version: 0.5.6
-    packages: "ctx7@0.5.6"
+    version: 0.5.7
+    packages: "ctx7@0.5.7"
     repo: upstash/context7
-    source: "https://github.com/upstash/context7/tree/ctx7@0.5.6/docs"
-    syncedAt: 2026-07-27
+    source: "https://github.com/upstash/context7/tree/ctx7@0.5.7/docs"
+    syncedAt: 2026-08-04
     generator: skilld
   npm-run-all2-skilld:
     packageName: npm-run-all2
-    version: 9.0.2
+    version: 9.0.3
+    packages: "npm-run-all2@9.0.3"
     repo: bcomnes/npm-run-all2
-    source: "https://github.com/bcomnes/npm-run-all2/tree/v9.0.2/docs"
-    syncedAt: 2026-07-20
+    source: "ungh://bcomnes/npm-run-all2@v9.0.3"
+    syncedAt: 2026-08-04
     generator: skilld
   lefthook-skilld:
     packageName: lefthook
@@ -250,10 +254,11 @@ skills:
     generator: skilld
   types-node-skilld:
     packageName: "@types/node"
-    version: 26.1.1
+    version: 26.1.2
+    packages: "@types/node@26.1.2"
     repo: DefinitelyTyped/DefinitelyTyped
-    source: "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/docs"
-    syncedAt: 2026-07-20
+    source: readme
+    syncedAt: 2026-08-04
     generator: skilld
   nitropack-skilld:
     packageName: nitropack
@@ -272,10 +277,11 @@ skills:
     generator: skilld
   tsx-skilld:
     packageName: tsx
-    version: 4.23.1
+    version: 4.23.5
+    packages: "tsx@4.23.5"
     repo: privatenumber/tsx
-    source: "https://github.com/privatenumber/tsx/tree/v4.23.1/docs"
-    syncedAt: 2026-07-20
+    source: "https://github.com/privatenumber/tsx/tree/v4.23.5/docs"
+    syncedAt: 2026-08-04
     generator: skilld
   nuxi-skilld:
     packageName: nuxi
@@ -308,9 +314,9 @@ skills:
     generator: skilld
   wrangler-skilld:
     packageName: wrangler
-    version: 4.114.0
-    packages: "wrangler@4.114.0"
+    version: 4.118.0
+    packages: "wrangler@4.118.0"
     repo: cloudflare/workers-sdk
     source: "https://developers.cloudflare.com/workers/**"
-    syncedAt: 2026-07-24
+    syncedAt: 2026-08-04
     generator: skilld

@@ -282,7 +282,6 @@
   }
   a {
     color: inherit;
-    text-decoration: underline var(--accent-color, var(--color-hot));
   }
   button {
     font: inherit;
