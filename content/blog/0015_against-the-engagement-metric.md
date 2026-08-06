@@ -8,4 +8,4 @@ read: "a few minutes"
 future: true
 ---
 
-(coming soon. this one's still cooking.)
+You may have noticed from this site that

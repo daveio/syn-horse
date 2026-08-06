@@ -44,8 +44,8 @@ useSeoMeta({
       <li>
         <span>
           <strong>recon</strong>
-          - exploring swift and swiftui. pretty simple; it <strong>RE</strong>sizes and <strong>CON</strong>verts images. built it due to
-          issues with mastodon, which it did not fix. may publish to the app store.
+          - exploring swift and swiftui. pretty simple; it <strong>RE</strong>sizes and <strong>CON</strong>verts
+          images. built it due to issues with mastodon, which it did not fix. may publish to the app store.
         </span>
       </li>
       <li>
@@ -71,19 +71,21 @@ useSeoMeta({
     <ul class="diamond-list">
       <li>
         <span
-          ><strong>the illuminatus! trilogy</strong>, robert anton wilson. for the second time. it literally restructures your
-          interface with reality while you read. the story is nonsense. it's a delivery mechanism for a wider
-          mind.</span
+          ><strong>the illuminatus! trilogy</strong>, robert anton wilson. for the second time. it literally
+          restructures your interface with reality while you read. the story is nonsense. it's a delivery mechanism for
+          a wider mind.</span
         >
       </li>
       <li>
         <span>
-          <strong>short stories</strong>. charles stross, david langford, others. they fit an audhd head and the short length means the author condenses as much meaning as possible into every single word. short stories good.
+          <strong>short stories</strong>. charles stross, david langford, others. they fit an audhd head and the short
+          length means the author condenses as much meaning as possible into every single word. short stories good.
         </span>
       </li>
       <li>
         <span
-          ><strong>too many <a href="https://are.na">are.na</a> blocks</strong>. probably more than is healthy, frankly. they're concentrated intent.</span
+          ><strong>too many <a href="https://are.na">are.na</a> blocks</strong>. probably more than is healthy, frankly.
+          they're concentrated intent.</span
         >
       </li>
     </ul>
@@ -102,8 +104,8 @@ useSeoMeta({
       </li>
       <li>
         <span
-          ><strong>tidying up</strong> - i mean, it's not like my space is too bad. but still, the executive function eludes me
-          once more.</span
+          ><strong>tidying up</strong> - i mean, it's not like my space is too bad. but still, the executive function
+          eludes me once more.</span
         >
       </li>
       <li>
@@ -124,8 +126,8 @@ useSeoMeta({
 </template>
 
 <style lang="css" scoped>
-  a {
-    color: var(--accent-color, var(--color-hot));
-    font-weight: bold;
-  }
+a {
+  color: var(--accent-color, var(--color-hot));
+  font-weight: bold;
+}
 </style>

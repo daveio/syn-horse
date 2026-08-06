@@ -21,6 +21,11 @@ useSeoMeta({
   title: () => `${page.value?.title} · ${SITE.name}`,
   description: () => page.value?.description
 })
+
+const formatGithubURL = (id: string) => {
+  const slug = id.split("/").slice(1).join("/")
+  return slug
+}
 </script>
 
 <template>
@@ -37,9 +42,9 @@ useSeoMeta({
       <ContentRenderer :value="page!" :prose="false" />
     </div>
     <div class="post-foot">
-      <span>◆ written in /var/notes/2026/ · cron'd, not edited</span>
+      <span>◆ from the depths of ~~/content/blog · presented with nuxt content</span>
       <span>
-        <a :href="SITE.github" target="_blank" rel="noopener">edit on github →</a>
+        <a :href="`${SITE.github}/blob/main/content/${formatGithubURL(page!.id)}`" target="_blank" rel="noopener">view on github →</a>
       </span>
     </div>
   </div>

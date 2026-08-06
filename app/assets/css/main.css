@@ -1369,10 +1369,7 @@
 
   /* chromatic aberration on hover for any element marked .fx-glitch */
   .fx-glitch:hover {
-    text-shadow:
-      2px 0 0 var(--accent-color, var(--color-hot)),
-      -2px 0 0 var(--color-cool);
-    animation: glitch-jitter 60ms steps(2) 1;
+    animation: glitch-jitter 100ms steps(2) 1;
   }
 
   /* boot-mode: while KonamiBoot is mounted, ramp the FX layer behind it
