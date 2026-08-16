@@ -33,6 +33,13 @@ export const COMMANDS: Command[] = [
   },
   { id: "domains", label: "/domains", ic: ">", desc: "the syn.* family" },
   {
+    id: "goodies",
+    label: "/goodies",
+    ic: ">",
+    desc: "free files. take one.",
+    konamiNote: "hidden secrets revealed",
+  },
+  {
     id: "panic",
     label: "/panic",
     ic: "!",

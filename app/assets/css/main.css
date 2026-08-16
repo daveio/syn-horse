@@ -833,24 +833,25 @@
     letter-spacing: 0.04em;
   }
 
-  /* graveyard reveal - TransitionGroup enter/leave for the abandoned cards,
-     plus a move transition so the live cards slide as the dead ones fold into
-     the year-sorted grid. translate + fade in the konami-in spirit. */
-  .grave-enter-active,
-  .grave-leave-active {
+  /* konami reveal - shared TransitionGroup enter/leave for elements that fold
+     in while konami mode is active (abandoned cards on /projects, secret files
+     on /goodies), plus a move transition so existing items slide as revealed
+     ones slot in. translate + fade in the konami-in spirit. */
+  .reveal-enter-active,
+  .reveal-leave-active {
     transition:
       opacity 300ms var(--ease-snap),
       transform 300ms var(--ease-snap);
   }
-  .grave-leave-active {
+  .reveal-leave-active {
     transition-duration: 220ms;
   }
-  .grave-enter-from,
-  .grave-leave-to {
+  .reveal-enter-from,
+  .reveal-leave-to {
     opacity: 0;
     transform: translateY(22px);
   }
-  .grave-move {
+  .reveal-move {
     transition: transform 300ms var(--ease-snap);
   }
 
@@ -948,6 +949,61 @@
     padding-bottom: 1px;
     color: var(--color-cool);
     border-bottom: 1px dotted var(--color-cool);
+  }
+
+  /* goody-* - /goodies file listing. each row is an external link to a file
+     on public.syn.horse. secret rows join the list only while konami mode is
+     active (commandsEnabled), lilac-struck on a void-0 band that bleeds past
+     the text columns, with a classified stamp in place of a size. */
+  .goody-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 36px;
+    border-top: 1px solid var(--color-void-4);
+  }
+  .goody-row {
+    display: grid;
+    grid-template-columns: 170px 1fr auto;
+    gap: 18px;
+    align-items: baseline;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--color-void-4);
+  }
+  .goody-path {
+    font-family: var(--font-display);
+    font-size: 28px;
+    line-height: 1.15;
+    color: var(--color-paper);
+    transition: color 80ms;
+  }
+  .goody-row:hover .goody-path {
+    color: var(--accent-color, var(--color-hot));
+  }
+  .goody-desc {
+    max-width: 620px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--color-paper-2);
+  }
+  .goody-meta {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--color-cool);
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  .goody-row.secret {
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-right: -12px;
+    margin-left: -12px;
+    background: var(--color-void-0);
+  }
+  .goody-row.secret .goody-path {
+    color: var(--color-lilac);
+  }
+  .goody-row.secret .goody-meta {
+    color: var(--color-lilac);
   }
 
   /* post - single blog entry */
@@ -1288,6 +1344,12 @@
     }
     .blog-row .read {
       white-space: normal;
+    }
+
+    /* goodies - path / desc / meta stack */
+    .goody-row {
+      grid-template-columns: 1fr;
+      gap: 6px;
     }
 
     /* cv - role meta sits above the body, talks single column */

@@ -41,7 +41,7 @@ useSeoMeta({
       things i made on purpose. things i got bored with are not on this list, but may appear with the correct
       invocation.
     </p>
-    <TransitionGroup tag="div" name="grave" class="proj-grid">
+    <TransitionGroup tag="div" name="reveal" class="proj-grid">
       <div
         v-for="card in cards"
         :key="(card.abandoned ? 'grave:' : 'live:') + card.name"

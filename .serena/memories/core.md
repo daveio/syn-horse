@@ -16,13 +16,13 @@ Personal site of syn (Dave). Nuxt 4 (SSR) on Cloudflare Workers, single bespoke 
 ## Source map (verified 2026-05-24)
 
 - `app/` = Nuxt `srcDir`; `server/` = Nitro. Root config: `nuxt.config.ts`, `content.config.ts`, `drizzle.config.ts`, `tsconfig.json`.
-- Pages `app/pages/*.vue`: index, projects, domains, contact, panic, cv, now, void (hidden, `layout: false`), blog/index, blog/[slug].
+- Pages `app/pages/*.vue`: index, projects, domains, goodies (public files listing; konami reveals secret rows via the shared `.reveal-*` TransitionGroup, renamed from `.grave-*`), contact, panic, cv, now, void (hidden, `layout: false`), blog/index, blog/[slug].
 - Shell: `app/layouts/default.vue`; 404 via `app/error.vue` + `app/components/NotFound.vue`.
 - Components in `app/components/{ui,layout,OgImage}/`. Auto-import is path-prefixed: `layout/StatusBar.vue` → `<LayoutStatusBar/>`; top-level `NotFound.vue` → `<NotFound/>`.
 - `app/components/OgImage/*.takumi.vue` (5: BlogPost, Docs, General, NuxtSeo, ProductCard) — OG-image templates rendered via @takumi-rs.
 - Composables `app/composables/*.ts`: clock/time (useClock, useTime), konami suite (useKonamiCode/State/Toast/Boot/Orchestrator), useCommandPalette.
 - Auto-imported client utils `app/utils/*.ts` (format-blog-date.ts).
-- Static data `app/data/*.ts`: site, projects, cv, domains, social, im, commands. `site.ts` = single source for status/version/urls. No `posts.ts` — the blog is @nuxt/content (`blog` collection, `content/blog/*.md`, queried via `queryCollection("blog")`).
+- Static data `app/data/*.ts`: site, projects, cv, domains, goodies, social, im, commands. `site.ts` = single source for status/version/urls. No `posts.ts` — the blog is @nuxt/content (`blog` collection, `content/blog/*.md`, queried via `queryCollection("blog")`).
 - Global CSS `app/assets/css/main.css`: `@theme` tokens + daisyUI theme + `@layer components` classes + FX overlays.
 - Server: `server/api/panic.post.ts` (→ POST /api/panic); `server/utils/{db.ts,pager.ts}` (auto-imported); `server/db/schema.ts`; migrations `server/db/migrations/sqlite/00NN_*.sql` (through `0002_fast_elektra`; first is `0000_stale_omega_sentinel`).
 
