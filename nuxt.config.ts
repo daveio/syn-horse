@@ -93,6 +93,11 @@ export default defineNuxtConfig({
   },
   experimental: {
     componentIslands: true,
+    defaults: {
+      nuxtLink: {
+        trailingSlash: "remove", // or 'append'
+      },
+    },
     inlineRouteRules: true,
     lazyHydration: true,
     // payloadExtraction is for `nuxt generate` (static prerender); with dynamic SSR
@@ -156,7 +161,7 @@ export default defineNuxtConfig({
     // R2 bucket (binding defaults to 'BLOB')
     blob: {
       driver: "cloudflare-r2",
-      bucketName: "syn-horse",
+      bucketName: "private-syn-horse",
       binding: "BLOB",
     },
   },
@@ -270,7 +275,6 @@ export default defineNuxtConfig({
             },
           ],
         },
-        // r2_buckets: [{ binding: "BLOB", bucket_name: "syn-horse" }],
         routes: [
           {
             custom_domain: true,
@@ -322,6 +326,90 @@ export default defineNuxtConfig({
           "X-XSS-Protection": "0",
         },
       },
+      "/ssh/config": {
+        redirect: {
+          to: "https://public.syn.horse/ssh/config",
+          statusCode: 301,
+        },
+      },
+      "/ssh/config/": {
+        redirect: {
+          to: "https://public.syn.horse/ssh/config",
+          statusCode: 301,
+        },
+      },
+      "/ssh/keys": {
+        redirect: {
+          to: "https://public.syn.horse/ssh/keys",
+          statusCode: 301,
+        },
+      },
+      "/ssh/keys/": {
+        redirect: {
+          to: "https://public.syn.horse/ssh/keys",
+          statusCode: 301,
+        },
+      },
+      "/gpg/agent": {
+        redirect: {
+          to: "https://public.syn.horse/gpg/agent",
+          statusCode: 301,
+        },
+      },
+      "/gpg/agent/": {
+        redirect: {
+          to: "https://public.syn.horse/gpg/agent",
+          statusCode: 301,
+        },
+      },
+      "/gpg/config": {
+        redirect: {
+          to: "https://public.syn.horse/gpg/config",
+          statusCode: 301,
+        },
+      },
+      "/gpg/config/": {
+        redirect: {
+          to: "https://public.syn.horse/gpg/config",
+          statusCode: 301,
+        },
+      },
+      "/gpg/keys": {
+        redirect: {
+          to: "https://public.syn.horse/gpg/keys",
+          statusCode: 301,
+        },
+      },
+      "/gpg/keys/": {
+        redirect: {
+          to: "https://public.syn.horse/gpg/keys",
+          statusCode: 301,
+        },
+      },
+      "/git": {
+        redirect: {
+          to: "https://public.syn.horse/git",
+          statusCode: 301,
+        },
+      },
+      "/git/": {
+        redirect: {
+          to: "https://public.syn.horse/git",
+          statusCode: 301,
+        },
+      },
+      "/sudo": {
+        redirect: {
+          to: "https://public.syn.horse/sudo",
+          statusCode: 301,
+        },
+      },
+      "/sudo/": {
+        redirect: {
+          to: "https://public.syn.horse/sudo",
+          statusCode: 301,
+        },
+      },
       // "/gender":s { isr: 3600 },
       // "/api": { prerender: true },
       // "/todo": { ssr: false }, // Client-only interactive page
@@ -335,6 +423,11 @@ export default defineNuxtConfig({
       //     "Access-Control-Allow-Origin": "*",
       //   },
       // },
+    },
+  },
+  router: {
+    options: {
+      strict: false, // default — /foo and /foo/ both match the same route
     },
   },
   runtimeConfig: {
