@@ -44,7 +44,9 @@ const formatGithubURL = (id: string) => {
     <div class="post-foot">
       <span>◆ from the depths of ~~/content/blog · presented with nuxt content</span>
       <span>
-        <a :href="`${SITE.github}/blob/main/content/${formatGithubURL(page!.id)}`" target="_blank" rel="noopener">view on github →</a>
+        <a :href="`${SITE.github}/blob/main/content/${formatGithubURL(page!.id)}`" target="_blank" rel="noopener"
+          >view on github →</a
+        >
       </span>
     </div>
   </div>

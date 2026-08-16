@@ -26,6 +26,9 @@ if (commitHash.length === 0) {
 }
 
 export default defineNuxtConfig({
+  $development: {
+    modules: ["@nuxt/eslint"],
+  },
   app: {
     head: {
       htmlAttrs: {
@@ -33,13 +36,43 @@ export default defineNuxtConfig({
       },
       link: [
         {
-          href: "/images/icon.ico",
+          href: "/favicon-96x96.png?v=20260816",
+          rel: "icon",
+          sizes: "96x96",
+          type: "image/png",
+        },
+        {
+          href: "/favicon.ico",
           rel: "icon",
           type: "image/vnd.microsoft.icon",
         },
         {
           href: "https://basilisk.gallery/@syn",
           rel: "me",
+        },
+        {
+          href: "/favicon.svg?v=20260816",
+          rel: "icon",
+          type: "image/svg+xml",
+        },
+        {
+          href: "/favicon.ico?v=20260816",
+          rel: "shortcut icon",
+        },
+        {
+          href: "/apple-touch-icon.png?v=20260816",
+          rel: "apple-touch-icon",
+          sizes: "180x180",
+        },
+        {
+          href: "/site.webmanifest?v=20260816",
+          rel: "manifest",
+        },
+      ],
+      meta: [
+        {
+          content: "syn.horse",
+          name: "apple-mobile-web-app-title",
         },
       ],
     },
@@ -107,7 +140,6 @@ export default defineNuxtConfig({
       dialect: "sqlite",
       driver: "d1",
       connection: { databaseId: "2722c422-9352-45b5-9e7f-a4f6504e4f85" },
-      binding: "DB",
     },
     // KV namespace (binding defaults to 'KV')
     kv: {
@@ -147,7 +179,6 @@ export default defineNuxtConfig({
     // "DB binding not found".
     "@nuxt/icon",
     "@nuxt/image",
-    "@nuxt/eslint",
     "@nuxt/fonts",
     "@nuxt/scripts",
     "nuxt-security",

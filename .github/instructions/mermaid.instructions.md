@@ -89,4 +89,4 @@ For diagrams updated by the Mermaid Chart GitHub Sync app (or pre-commit regener
 
 ## Docs
 
-More commands and features: https://marketplace.visualstudio.com/items?itemName=MermaidChart.vscode-mermaid-chart
+More commands and features: <https://marketplace.visualstudio.com/items?itemName=MermaidChart.vscode-mermaid-chart>
