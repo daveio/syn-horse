@@ -162,8 +162,6 @@ These are real features, not throwaways, and they share extension patterns worth
   and `layout/KonamiBoot.vue`. Toggling it reveals `ABANDONED_PROJECTS` in the `/projects`
   grid and surfaces `KONAMI_COMMANDS` in the palette.
 - **`/void`** - a hidden page (`layout: false`).
-- **Static text easter eggs** - `public/sudo`, `public/git`, `public/gpg/*`, `public/ssh/*`
-  served as plain text on purpose (do not modify; see §13).
 
 ---
 

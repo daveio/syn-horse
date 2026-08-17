@@ -20,7 +20,7 @@ const rows = computed<GoodyRow[]>(() => {
 
 useSeoMeta({
   title: `goodies · ${SITE.name}`,
-  description: "files i keep public on purpose. take what you want."
+  description: "files i keep public. take what you want."
 })
 </script>
 
@@ -29,8 +29,7 @@ useSeoMeta({
     <div class="eyebrow">▶ /goodies · {{ rows.length }} files · free to a good home</div>
     <h1 class="page-h1">goodies<span class="dot">.</span></h1>
     <p class="lede">
-      files i keep public on purpose - configs, keys, small artefacts. take what you want; that is rather the point.
-      some files are not listed. the correct invocation fixes that.
+      files i keep public - configs, keys, small artefacts. take what you want; that is rather the point. some files are not listed. the correct invocation fixes that.
     </p>
     <TransitionGroup tag="div" name="reveal" class="goody-list">
       <NuxtLink
@@ -48,7 +47,7 @@ useSeoMeta({
     </TransitionGroup>
     <div class="footer-note mt-12">
       <span>◆ served raw from public.syn.horse</span>
-      <span>if a file 404s, i moved it. probably on purpose.</span>
+      <span>if a file 404s, you were too late. womp womp</span>
     </div>
   </div>
 </template>

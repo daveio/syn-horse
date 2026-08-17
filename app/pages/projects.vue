@@ -38,8 +38,7 @@ useSeoMeta({
     <div class="eyebrow">▶ /projects · {{ PROJECTS.length }} things</div>
     <h1 class="page-h1">projects<span class="dot">.</span></h1>
     <p class="lede">
-      things i made on purpose. things i got bored with are not on this list, but may appear with the correct
-      invocation.
+      things i made on purpose. things i got bored with or had to retire are not on this list, but may appear with the correct invocation.
     </p>
     <TransitionGroup tag="div" name="reveal" class="proj-grid">
       <div
