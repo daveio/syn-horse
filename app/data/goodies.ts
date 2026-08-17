@@ -10,37 +10,13 @@ export interface Goody {
 
 export const GOODIES: Goody[] = [
   {
-    path: "/ssh/config",
-    size: "~1.1k",
-    desc: "the ssh client config. host aliases, sane defaults, a decade of accumulated paranoia.",
-    url: "https://public.syn.horse/ssh/config",
-  },
-  {
-    path: "/ssh/keys",
+    path: "/ssh",
     size: "~6.8k",
     desc: "my public ssh keys, commented. drop them in authorized_keys and we're flatmates.",
     url: "https://public.syn.horse/ssh/keys",
   },
   {
-    path: "/git",
-    size: "~2.0k",
-    desc: "the gitconfig. mostly aliases - a hundred ways to type less git. the full confession.",
-    url: "https://public.syn.horse/git",
-  },
-  {
-    path: "/gpg/config",
-    size: "~8.1k",
-    desc: "gpg.conf with hardened defaults. borrowed from people smarter than me, then audited anyway.",
-    url: "https://public.syn.horse/gpg/config",
-  },
-  {
-    path: "/gpg/agent",
-    size: "41b",
-    desc: "two lines of gpg-agent cache ttl. the smallest file i publish. still load-bearing.",
-    url: "https://public.syn.horse/gpg/agent",
-  },
-  {
-    path: "/gpg/keys",
+    path: "/gpg",
     size: "~11.7k",
     desc: "my public gpg keys. encrypt things to me, verify things from me. trust model: bring your own.",
     url: "https://public.syn.horse/gpg/keys",
@@ -48,7 +24,7 @@ export const GOODIES: Goody[] = [
   {
     path: "/sudo",
     size: "32b",
-    desc: "one line of sudoers. NOPASSWD: ALL. do not do this. i do this.",
+    desc: "one line of sudoers, should you wish to give me root.",
     url: "https://public.syn.horse/sudo",
   },
 ]
