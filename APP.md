@@ -838,17 +838,22 @@ export function renderPostBodyToHtml(body: Parameters<typeof toHast>[0], baseUrl
 
 - **Caching (default):** runtime route + edge cache, under `nitro.routeRules` (alongside the
   existing `/api/**` rule):
+
   ```typescript
   "/feed.xml": { headers: { "cache-control": "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400" } },
   ```
+
   `/feed.xml` is outside `/api/**`, so it doesn't inherit the no-cache API rule. _Optional later
   optimisation:_ add `/feed.xml` to `nitro.prerender.routes` to emit a static file (zero runtime
   cost) - but **validate** that `bun run build` actually emits it and that the content query runs
   at prerender (MODERATE confidence; no prerender exists in the repo today).
+
 - **Head:** add to `app.head.link` in `nuxt.config.ts` (import `SITE` for the href):
+
   ```typescript
   { rel: "alternate", type: "application/rss+xml", title: SITE.name, href: SITE.feed }
   ```
+
 - **`SITE.feed` everywhere:** `app/pages/blog/index.vue` (`:href`), `app/pages/index.vue`,
   **`app/data/social.ts`** (the `/contact` link - the review catch).
 - **Dependencies:** add `feed` (runtime; tree is `feed → xml-js → sax`, all pure JS - bundling
