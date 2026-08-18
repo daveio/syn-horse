@@ -29,7 +29,9 @@ useSeoMeta({
     <div class="eyebrow">▶ /goodies · {{ rows.length }} files · free to a good home</div>
     <h1 class="page-h1">goodies<span class="dot">.</span></h1>
     <p class="lede">
-      files i keep public - configs, keys, small artefacts. take what you want; that is rather the point. tarballs are compressed using <NuxtLink to="https://facebook.github.io/zstd">Zstandard</NuxtLink>. some files are not listed. the correct invocation fixes that.
+      files i keep public - configs, keys, small artefacts. take what you want; that is rather the point. tarballs are
+      compressed using <NuxtLink to="https://facebook.github.io/zstd">Zstandard</NuxtLink>. some files are not listed.
+      the correct invocation fixes that.
     </p>
     <TransitionGroup tag="div" name="reveal" class="goody-list">
       <NuxtLink

@@ -9,7 +9,7 @@ export interface Goody {
 }
 
 export const GOODIES: Goody[] = [
-    {
+  {
     path: "ctrld.tar.zst",
     size: "~2k",
     desc: "controld block page root ca. includes install scripts.",
@@ -21,12 +21,13 @@ export const GOODIES: Goody[] = [
     desc: "my cv. once again: hire me.",
     url: "https://public.syn.horse/files/cv.pdf",
   },
-    {
+  {
     path: "gpg",
     size: "~12k",
     desc: "my public gpg keys. encrypt things to me, verify things from me.",
     url: "https://public.syn.horse/gpg/keys",
-  },{
+  },
+  {
     path: "nf.tar.zst",
     size: "~2.2g",
     desc: "nerd fonts; just the font files. includes ioskeley as a bonus.",
@@ -68,5 +69,5 @@ export const SECRET_GOODIES: Goody[] = [
     size: "classified",
     desc: "bugs (1995). the whole series. keep an eye out for my favourite prop, the password entry terminal at the end of 'manna from heaven'.",
     url: "https://public.syn.horse/files/bugs.tar.zst",
-  }
+  },
 ]
