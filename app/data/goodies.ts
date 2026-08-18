@@ -9,20 +9,37 @@ export interface Goody {
 }
 
 export const GOODIES: Goody[] = [
+    {
+    path: "ctrld.tar.zst",
+    size: "~2k",
+    desc: "controld block page root ca. includes install scripts.",
+    url: "https://public.syn.horse/files/ctrld.tar.zst",
+  },
   {
-    path: "/ssh",
+    path: "cv.pdf",
+    size: "~243k",
+    desc: "my cv. once again: hire me.",
+    url: "https://public.syn.horse/files/cv.pdf",
+  },
+    {
+    path: "gpg",
+    size: "~12k",
+    desc: "my public gpg keys. encrypt things to me, verify things from me.",
+    url: "https://public.syn.horse/gpg/keys",
+  },{
+    path: "nf.tar.zst",
+    size: "~2.2g",
+    desc: "nerd fonts; just the font files. includes ioskeley as a bonus.",
+    url: "https://public.syn.horse/files/nf.tar.zst",
+  },
+  {
+    path: "ssh",
     size: "~7k",
-    desc: "my public ssh keys, commented. drop them in authorized_keys and we're flatmates.",
+    desc: "my public ssh keys. drop them in authorized_keys and we're flatmates.",
     url: "https://public.syn.horse/ssh/keys",
   },
   {
-    path: "/gpg",
-    size: "~12k",
-    desc: "my public gpg keys. encrypt things to me, verify things from me. trust model: bring your own.",
-    url: "https://public.syn.horse/gpg/keys",
-  },
-  {
-    path: "/sudo",
+    path: "sudo",
     size: "~32b",
     desc: "one line of sudoers, should you wish to give me root.",
     url: "https://public.syn.horse/sudo",
@@ -35,21 +52,21 @@ export const GOODIES: Goody[] = [
 // classified stamp, so keep it a word rather than a number.
 export const SECRET_GOODIES: Goody[] = [
   {
-    path: "/horse",
+    path: "avf.tar.zst",
     size: "classified",
-    desc: "an ascii horse. hand-tuned, load-bearing, not to be fed.",
-    url: "https://public.syn.horse/horse",
+    desc: "access virus firmware. for use with ostirus.",
+    url: "https://public.syn.horse/files/avf.tar.zst",
   },
   {
-    path: "/konami",
+    path: "doof.tar.zst",
     size: "classified",
-    desc: "the sequence itself, annotated. you clearly already know it, but it's nice to have things in writing.",
-    url: "https://public.syn.horse/konami",
+    desc: "music. gay ebm and industrial goodness.",
+    url: "https://public.syn.horse/files/doof.tar.zst",
   },
   {
-    path: "/mixtape",
+    path: "bugs.tar.zst",
     size: "classified",
-    desc: "an m3u of what this site was built to. no track notes. no apologies.",
-    url: "https://public.syn.horse/mixtape",
-  },
+    desc: "bugs (1995). the whole series. keep an eye out for my favourite prop, the password entry terminal at the end of 'manna from heaven'.",
+    url: "https://public.syn.horse/files/bugs.tar.zst",
+  }
 ]

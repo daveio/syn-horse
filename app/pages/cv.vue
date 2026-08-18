@@ -21,7 +21,7 @@ useSeoMeta({
     <br />
     <p>I can't promise a fast response if you message me on linkedin, but you're welcome to peruse my profile.</p>
     <div class="cv-actions">
-      <NuxtLink to="https://public.syn.horse/files/cv.dave-williams.pdf" target="_blank" rel="noopener noreferrer">
+      <NuxtLink to="https://public.syn.horse/files/cv.pdf" target="_blank" rel="noopener noreferrer">
         <button type="button" class="btn-syn fx-glitch">↓ download pdf</button>
       </NuxtLink>
       <a href="https://www.linkedin.com/in/dcwilliams" target="_blank" rel="noopener noreferrer">
