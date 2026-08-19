@@ -23,10 +23,11 @@ I spent years being told off for "not remembering" and thought, well, fuck, my b
 
 Anyway. I quietly built workarounds.
 
-| **Dave** | I honestly couldn't tell you what colour anyone's eyes are                |
-| -------- | ------------------------------------------------------------------------- |
-| **Dave** | beyond knowing from memory my mum tells me hers are brown & my dad's blue |
-| **Dave** | but that's from being told, not perception                                |
+```plaintext
+<syn> I honestly couldn't tell you what colour anyone's eyes are
+<syn> beyond knowing from memory my mum tells me hers are brown & my dad's blue
+<syn> but that's from being told, not perception
+```
 
 One awkward detail complicates this story: I'm clever. Unfairly, almost comically clever.
 
@@ -44,15 +45,21 @@ Here's the bit that unnerves people: I don't remember. I reconstruct.
 
 Where most folks reach back and retrieve a scene, I assemble a plausible version on the fly from base principles, stored truths, and patterns. Think: semantic Lego. I don't have the set photo on the box; I've just got a bucket of pieces and an excellent sense of physics.
 
-- You ask about last week's meeting? I infer who was there, what they care about, our norms, and the likely trajectory. The result sounds like recall because it lands in the right place.
-- You ask where I left my keys? I model my behaviour, the room layout, and probability. The result looks like memory; I often find the keys.
+### You ask about last week's meeting?
+
+I infer who was there, what they care about, our norms, and the likely trajectory. The result sounds like recall because it lands in the right place.
+
+### You ask where I left my keys?
+
+I model my behaviour, the room layout, and probability. The result looks like memory; I often find the keys.
 
 But this method has a failure mode: if one foundational "brick" is wrong, the whole thing deviates. The story remains coherent, persuasive, even elegant - just not true. And because there's no stored scene to cross-check, I can't look inward and say, "Hang on, that's not what happened." I can only accept better evidence and update the model. It's architectural, not deceitful.
 
-| **Dave** | episodic memory does not exist for me                              |
-| -------- | ------------------------------------------------------------------ |
-| **Dave** | there is memory there, but it's memory for facts                   |
-| **Dave** | and those facts are then used to reconstruct a "memory" simulacrum |
+```plaintext
+<syn> episodic memory does not exist for me
+<syn> there is memory there, but it's memory for facts
+<syn> and those facts are then used to reconstruct a "memory" simulacrum
+```
 
 What I didn't realise was this: there's a word for it. Whereas I thought I was just broken, it took me 41 years to find out that [**Severely Deficient Autobiographical Memory (SDAM)**](https://www.sadied.com/sdam) exists. I am also [**aphantasic**](https://www.sadied.com/aphantasia) and [**alexithymic**](https://www.psychologytoday.com/us/basics/alexithymia), two things which are both _excellent_ words, and classically comorbid with SDAM. We'll come back to them later.
 
@@ -64,18 +71,19 @@ Most days, no one notices. My reconstructions are fast, high-fidelity, and socia
 
 But here's the rub, dear reader. When it goes wrong, it goes gloriously wrong. One incorrect assumption and I've "remembered" a version of events that never existed. Not maliciously. Not even sloppily. Just confidently assembling a cathedral on a plate of jelly.
 
-| **Mog**  | You remember stories though                                                           |
-| -------- | ------------------------------------------------------------------------------------- |
-| **Dave** | I remember facts about stories                                                        |
-| **Dave** | I can reconstruct the story                                                           |
-| **Dave** | but good example                                                                      |
-| **Mog**  | Huh                                                                                   |
-| **Dave** | sometimes I veer off track                                                            |
-| **Dave** | if i'm telling them around my mum she'll say "no, that's not what happened then"      |
-| **Dave** | the reconstruction is accurate until it reaches a faulty fact                         |
-| **Dave** | if a base principle is faulty, stories are a perfect example, the story will veer off |
-| **Dave** | it'll be plausible, but it won't be what happened                                     |
-| **Dave** | it'll illustrate the same point, but won't be the correct specific chain of events    |
+```plaintext
+<mog> You remember stories though
+<syn> I remember facts about stories
+<syn> I can reconstruct the story
+<syn> but good example
+<mog> Huh
+<syn> sometimes I veer off track
+<syn> if i'm telling them around my mum she'll say "no, that's not what happened then"
+<syn> the reconstruction is accurate until it reaches a faulty fact
+<syn> if a base principle is faulty, stories are a perfect example, the story will veer off
+<syn> it'll be plausible, but it won't be what happened
+<syn> it'll illustrate the same point, but won't be the correct specific chain of events
+```
 
 Cue someone I trust saying, "That didn't happen." And me thinking, fair enough, let's rewrite the foundation and rebuild. And that is _so often_ read as doubting what they're telling me. It's not. I'm trying to find the broken piece in the increasingly unwieldy box.
 
@@ -113,18 +121,19 @@ Experiences stored as facts with annotations, not time-travel. No memory of a fe
 
 All this turns out to be suspiciously convenient for negative emotional experiences like pain or fear: I can describe that I was terrified without re-feeling terror. Useful for functioning; infuriating for therapy. Try healing a wound you can't feel but can produce an inventory list for.
 
-| **Mog**  | How often can you identify how you feel? I think the veil got ripped off the painful side of your emotional landscape through the last three years of Dave's Medically Exotic Adventures               |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Mog**  | Be nice if you could also record joy to balance it out                                                                                                                                                 |
-| **Dave** | I still don't feel traumatised by that and didn't at the time either                                                                                                                                   |
-| **Dave** | What I am willing to accept is that I WAS                                                                                                                                                              |
-| **Mog**  | … you were literally screaming with terror                                                                                                                                                             |
-| **Dave** | Yep, and I have a memory of a description of that, not the thing itself                                                                                                                                |
-| **Mog**  | Huh                                                                                                                                                                                                    |
-| **Mog**  | I mean you realise that points to it very much being trauma                                                                                                                                            |
-| **Mog**  | maybe your whole adolescent and adult life is. See. When hijacked by the amygdala one stops recording memory. If you're in fight or flight you're bypassing all the bits of the brain that make memory |
-| **Mog**  | So if you're in fight or flight every time you interact with people well                                                                                                                               |
-| **Mog**  | I dunno. You're interesting                                                                                                                                                                            |
+```plaintext
+<mog> How often can you identify how you feel? I think the veil got ripped off the painful side of your emotional landscape through the last three years of Dave's Medically Exotic Adventures
+<mog> Be nice if you could also record joy to balance it out
+<syn> I still don't feel traumatised by that and didn't at the time either
+<syn> What I am willing to accept is that I WAS
+<mog> ...you were literally screaming with terror
+<syn> Yep, and I have a memory of a description of that, not the thing itself
+<mog> Huh
+<mog> I mean you realise that points to it very much being trauma
+<mog> maybe your whole adolescent and adult life is. See. When hijacked by the amygdala one stops recording memory. If you're in fight or flight you're bypassing all the bits of the brain that make memory
+<mog> So if you're in fight or flight every time you interact with people well
+<mog> I dunno. You're interesting
+```
 
 And yes, if you spend years in low-level fight-or-flight, the amygdala hogs the mic and the hippocampus stops laying down rich episodic tapes. It's not a character flaw. It's a traffic diversion.
 

@@ -2,7 +2,7 @@
 path: /blog/how-i-turned-notion-into-a-blog
 date: 2025-01-20
 title: "how i turned notion into a blog"
-description: "the original sin. before this very rewrite. cron jobs and webhooks. would not recommend."
+description: "the original sin. before this very rewrite. worked fairly well. became annoying fast."
 tags: ["build"]
 read: "18 min"
 ---
