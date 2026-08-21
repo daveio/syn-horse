@@ -12,10 +12,10 @@ const { data: blogCount } = await useAsyncData(
 </script>
 
 <template>
-  <div class="relative mx-auto max-w-[920px] px-5 pt-10 pb-20 md:px-8 md:pt-14">
-    <div class="eyebrow">▶ syn · they/them · non-binary</div>
+  <div class="relative mx-auto max-w-230 px-5 pt-10 pb-20 md:px-8 md:pt-14">
+    <div class="eyebrow">▶ syn · non-binary · they/them</div>
     <div class="grid grid-cols-1 items-stretch gap-6 md:grid-cols-[1fr_auto]">
-      <h1 class="pb-3.5 font-display text-[clamp(64px,18vw,128px)] leading-[1.05] text-paper">
+      <h1 class="pb-3.5 font-display text-[clamp(64px,18vw,128px)] leading-tight text-paper">
         devops<br />and bad<br />ideas<span class="text-hot">.</span>
       </h1>
       <NuxtImg
@@ -26,7 +26,7 @@ const { data: blogCount } = await useAsyncData(
         class="aspect-square self-stretch h-full object-cover max-md:order-first max-md:mx-auto max-md:h-48 max-md:w-48"
       />
     </div>
-    <p class="mt-4.5 max-w-[620px] text-[19px] leading-[1.55] text-paper-2">
+    <p class="mt-4.5 max-w-155 text-[19px] leading-[1.55] text-paper-2">
       i'm <code class="font-semibold">syn</code>. queer, disabled devops engineer and general-purpose nerd. i write
       occasionally, ship occasionally, and have a lot of opinions about prometheus and accessibility.
     </p>

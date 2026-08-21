@@ -51,7 +51,7 @@ useSeoMeta({
         <h3 class="proj-title">{{ card.name }}</h3>
         <p class="proj-body">{{ card.desc }}</p>
         <div v-if="card.abandoned" class="proj-epitaph">† {{ card.epitaph }}</div>
-        <div v-else class="proj-url">↗ {{ card.url }}</div>
+        <div v-else class="proj-url"><Icon name="grommet-icons:github" class="proj-icon-github" size="18" /> <a :href="`https://github.com/${card.url}`" target="_blank">{{ card.url }}</a></div>
         <div class="proj-tags">
           <span v-for="(t, i) in card.tags" :key="i" :class="['tg', t.k]">{{ t.l }}</span>
         </div>
@@ -59,3 +59,11 @@ useSeoMeta({
     </TransitionGroup>
   </div>
 </template>
+
+<style lang="css" scoped>
+.proj-icon-github {
+  /* shift the icon down a bit so it aligns with the text baseline */
+  position: relative;
+  top: 4px;
+}
+</style>
