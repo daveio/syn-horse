@@ -68,5 +68,6 @@ useSeoMeta({
   /* shift the icon down a bit so it aligns with the text baseline */
   position: relative;
   top: 4px;
+  margin-right: 4px;
 }
 </style>
