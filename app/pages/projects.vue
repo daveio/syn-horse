@@ -51,7 +51,10 @@ useSeoMeta({
         <h3 class="proj-title">{{ card.name }}</h3>
         <p class="proj-body">{{ card.desc }}</p>
         <div v-if="card.abandoned" class="proj-epitaph">† {{ card.epitaph }}</div>
-        <div v-else class="proj-url"><Icon name="grommet-icons:github" class="proj-icon-github" size="18" /> <a :href="`https://github.com/${card.url}`" target="_blank">{{ card.url }}</a></div>
+        <div v-else class="proj-url">
+          <Icon name="grommet-icons:github" class="proj-icon-github" size="18" />
+          <a :href="`https://github.com/${card.url}`" target="_blank">{{ card.url }}</a>
+        </div>
         <div class="proj-tags">
           <span v-for="(t, i) in card.tags" :key="i" :class="['tg', t.k]">{{ t.l }}</span>
         </div>

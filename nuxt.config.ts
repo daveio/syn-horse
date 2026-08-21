@@ -26,9 +26,6 @@ if (commitHash.length === 0) {
 }
 
 export default defineNuxtConfig({
-  $development: {
-    modules: ["@nuxt/eslint"],
-  },
   app: {
     head: {
       htmlAttrs: {
@@ -182,6 +179,7 @@ export default defineNuxtConfig({
     // `globalThis.__env__ = Promise<env>` initially, so NuxtHub's migrations
     // plugin would observe `__env__` before it resolved and fail with
     // "DB binding not found".
+    "@nuxt/eslint",
     "@nuxt/icon",
     "@nuxt/image",
     "@nuxt/fonts",
