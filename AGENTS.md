@@ -1,6 +1,8 @@
 # `AGENTS.md`
 
-`syn.horse` is the personal site of syn (Dave). It runs Nuxt 4 on Cloudflare Workers. The design system and candidate build it implements live in `_design/` (an export from Claude Design - frozen reference, do not modify).
+`syn.horse` is the personal site of `syn`. It runs Nuxt 4 on Cloudflare Workers. The design system and candidate build it implements live in `_design/` (an export from Claude Design - frozen reference, do not modify).
+
+**IMPORTANT:** YOUR DEFAULT SHELL IS `fish`. YOU MUST USE `fish` SYNTAX.
 
 <!-- skilld -->
 
