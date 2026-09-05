@@ -1,6 +1,6 @@
 # syn.horse — core
 
-Personal site of syn (Dave). Nuxt 4 (SSR) on Cloudflare Workers, single bespoke daisyUI `synhorse` theme. Custom domains: syn.horse, syn.as, syn.haus, syn.pink, dcw.soy (+ www).
+Personal site of syn (Dave). Nuxt 4 (SSR) on Cloudflare Workers, single bespoke daisyUI `synhorse` theme. Custom domains: **only** syn.horse + www.syn.horse (routes in `nuxt.config.ts`). syn.as / syn.haus / syn.pink / dcw.soy were dropped from routes in 1d0b71d (2026-05-07) and have no DNS records (verified 2026-09-05); README, APP.md and the synhorse-workers skill are stale on this.
 
 **`CLAUDE.md` → `AGENTS.md` (repo root) is the authoritative project doc and is always in agent context** — architecture, full where-things-live table, conventions, exhaustive D1/Drizzle guide, panic-pipeline section. Read it first. These memories complement it with the _verified_ source map and non-obvious facts; they no longer track doc drift (AGENTS.md + README were reconciled to code on 2026-05-24).
 
